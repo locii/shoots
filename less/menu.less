@@ -1,0 +1,152 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+Theme: Shoots
+******************************************************************/
+
+#navwrap {
+	
+	float:left;
+	width:100%;
+	
+	.container {
+		border-top:1px solid @border-color;
+		border-bottom:1px solid @border-color;
+		max-width:@basewidth;
+		margin:0 auto;
+		padding-top:0;
+		padding-bottom:0;
+		
+	}
+	
+	button {
+		height:@nav-height;
+		line-height:@nav-height / 2;
+	}
+	
+	.inner {
+		background:@navbar-default-bg;
+		height:@nav-height;
+		line-height:@nav-height / 2;
+	}
+	
+	// Top level ul
+	ul {
+		margin-bottom:0;
+		margin-top:0;
+		padding-left:0;
+		.list-reset();
+	}
+	
+	li {
+		line-height:@nav-height / 2;
+		.first-child();
+		.last-child();
+		.transition();
+		
+	}
+	
+.nav
+
+	li.menu-item-has-children 
+	
+		{
+		
+			> a{
+		
+				span {
+		
+					margin-right:4px;
+		
+						&:after {
+				
+							margin-top:@nav-height / 2;
+							float:right;
+							content: "";
+							width: 0; 
+							height: 0; 
+							border-left: 4px solid transparent;
+							border-right: 4px solid transparent;
+							border-top: 4px solid @navbar-default-link-color;
+					}
+				}	
+		
+				&:hover span:after{
+					border-left: 4px solid transparent;
+					border-right: 4px solid transparent;
+					border-top: 4px solid @navbar-default-link-hover-color;
+				}
+		}
+		
+		&:hover span:after{
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-top: 4px solid @navbar-default-link-hover-color;
+		}
+	}
+	a {
+		font-family: @body-font-family;
+		font-weight:@nav-font-weight
+	}
+	
+	// Top level links
+	li > a {
+		color:@navbar-default-link-color;
+		background:@navbar-default-link-bg;
+		height:@nav-height;
+		line-height:@nav-height;
+		padding:0 20px;
+		
+		&:hover{
+			background:@navbar-default-link-hover-bg;
+			color:@navbar-default-link-hover-color
+		}
+	}
+	
+	li.current-menu-item > a,
+	li.current-menu-parent > a,
+	li.current_page_item > a,
+	li.current-page-ancestor > a {
+		background:@navbar-default-link-hover-bg;
+		color:@navbar-default-link-hover-color
+	}
+	
+	li:hover a {
+		background:@navbar-default-link-hover-bg;
+		color:@navbar-default-link-hover-color
+	}
+	
+	
+	// Drop down links
+	ul.sub-menu,
+	ul.children {
+		background:@dropdown-bg;
+		border-color:@border-color;
+		.box-shadow( 0 15px 15px rgba(0, 0, 0, 0.1));
+		min-width:300px;
+		
+		li {
+			line-height:1.4em;
+			display:block;
+			float:left;
+			width:100%
+		}
+		
+		a {
+			background:none;
+			border-top:1px solid @dropdown-link-border-top;
+			border-bottom:1px solid @dropdown-link-border-bottom;
+			color: @dropdown-link-color;
+			display:block;
+			display:block;
+			float:left;
+			width:100%;
+			
+			&:hover {
+				color: @dropdown-link-color-hover
+			}
+		}
+	}
+	
+	
+}

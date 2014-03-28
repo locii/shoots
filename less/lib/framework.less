@@ -1,0 +1,95 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+******************************************************************/
+
+
+//
+// IMPORTING STYLES
+//
+
+// import normalize
+@import "_normalize.less";
+
+// import mixins
+@import "_mixins.less";
+
+
+// import tools
+@import "_tools.less";
+
+
+
+// Styles that get applied across all viewports
+@import "_base.less";
+
+
+// layout
+@import "_layout_offcanvas.less";
+
+
+// Content
+@import "_comment_form.less";
+@import "_content_author.less";
+
+
+// page types
+@import "_page_tabs.less";
+@import "_page_grid.less";
+@import "_page_featured.less";
+
+
+// Appearance
+@import "_appearance_fonts.less";
+@import "_appearance_alerts.less";
+
+// Styles above the grid-collapse settings
+@media only screen and (min-width: @grid-collapse) {
+
+	// import grid
+	@import "_layout_grid.less";
+	
+	
+	// Determines the widths applied to multiple widget layouts
+	@import "_layout_widgets.less";
+	
+	// All styles for desktops etc
+	@import "_layout_gridcollapse_up.less";
+
+} 
+
+
+// scaffolding for sidebar layouts
+@import "_layout_main.less";
+
+// Pagination
+@import "_layout_pagination.less";
+
+// Menu
+@import "_menu_affix.less";
+@import "_menu_accordion.less";
+
+@media only screen and (max-width: @menu-collapse) {
+
+	@import "_collapse-menu.less";
+
+} 
+
+@media only screen and (min-width: @menu-collapse) {
+
+	@import "_menu.less";
+
+} 
+
+
+// Print
+@media print {
+	@import "_print.less";
+} 

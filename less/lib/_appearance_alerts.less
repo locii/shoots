@@ -1,0 +1,49 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+Theme: Shoots
+******************************************************************/
+
+
+@alert-yellow:      #ebe16f;
+@alert-red:         #fbe3e4;
+@alert-green:       #e6efc2;
+@alert-blue:        #d5edf8;
+
+@black:             #000;
+@white:             #fff;
+
+@bones-pink:        #f01d4f;
+@bones-blue:        #1990db;
+
+
+// alerts and notices
+.alert {
+	margin: 10px 0;
+	padding: 5px 18px;
+	border: 1px solid;
+}
+
+.alert-help {
+  .alert();
+	border-color: darken(@alert-yellow, 5%);
+	background: @alert-yellow;
+}
+
+.alert-info {
+  .alert();
+	border-color: darken(@alert-blue, 5%);
+	background: @alert-blue;
+}
+
+.alert-error {
+  .alert();
+	border-color: darken(@alert-red, 5%);
+	background: @alert-red;
+}
+
+.alert-success {
+  .alert();
+	border-color: darken(@alert-green, 5%);
+	background: @alert-green;
+}

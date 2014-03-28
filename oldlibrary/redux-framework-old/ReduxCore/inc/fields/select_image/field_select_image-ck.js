@@ -1,0 +1,1 @@
+(function(e){e(".redux-select-image-item").on("change",function(){var t=e(this).parents(".redux-field:first").find(".redux-preview-image");if(e(this).val()==="")t.fadeOut("medium",function(){t.attr("src","")});else{t.attr("src",e(this).val());t.fadeIn().css("visibility","visible")}})})(jQuery);

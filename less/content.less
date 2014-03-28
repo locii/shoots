@@ -1,0 +1,102 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+Theme: Shoots
+******************************************************************/
+
+
+// The main content area - includes sidebars
+#main {
+
+	padding:50px 0;
+	clear:both;
+	
+	&.with-breadcrumb {
+		padding:0
+	}
+	
+	header {
+		h1 {
+			margin-top:0;
+			margin-bottom:0
+		}
+		
+		p {
+			margin:0; 
+			color:#333;
+		}
+		
+		.byline {
+			color:@gray;
+			.small();
+			border-bottom:1px solid #eee;
+			padding-bottom:15px;
+			margin-bottom:30px
+		}
+	}
+	
+	.article-footer {
+		margin:15px 0;
+		padding:15px 0;
+		float:left;
+		width:100%
+	}
+
+}
+
+
+// Main Breadcumb styling
+#breadcrumb {
+	color:#999;
+	font-size:90%;
+	padding:10px 0;
+	margin-bottom:30px;
+	border-bottom:1px solid @border-color;
+	
+	span.breadcrumb-separator {
+		padding:0 10px;
+	}
+	
+	a {
+		text-decoration:none
+	}
+}
+
+
+// Home page
+.home {
+	
+	// used like this because there are no breadcrumbs on the home page
+	#main {
+		padding:50px 0
+	}
+}
+
+
+// Tags
+.tags {
+	float:left;
+	width:100%;
+	margin-bottom:30px;
+	padding-bottom:30px;
+	.divider-style;
+
+	a {
+		.btn-state()
+	}
+}
+
+// Single View
+.single .article-footer {
+	float:left;
+	width:100%;
+	.divider-style-top ();
+	margin-top:30px
+}
+
+
+// Read more
+.more-link {
+	float:right
+}
+

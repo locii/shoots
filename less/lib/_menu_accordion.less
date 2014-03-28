@@ -1,0 +1,53 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+Theme: Shoots
+******************************************************************/
+
+ul.accordion {
+
+	li.accordion-trigger {
+	
+		> a {
+		
+		
+	
+			span {
+			
+			
+				
+				&:before {
+					float:right;
+					content: '\e819';
+					background:@primary;
+					padding:8px;
+					color:#fff;
+					margin:12px -8px 0 0
+					
+				}
+			}
+			
+			&.open 
+			{ 
+				span,
+				 {
+					&:before {
+						content: '\e811';
+						background:@secondary;
+					}
+				}
+			}
+			
+			&:hover {
+			
+				span,
+				 {
+					&:before {
+						background:@secondary;
+					}
+				}
+				
+			}
+		}
+	}
+}

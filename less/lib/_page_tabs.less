@@ -1,0 +1,42 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tabbed page layout Stylesheet
+
+******************************************************************/
+
+.uk-switcher {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+.tab-list {
+	
+	float:left;
+	width:100%;
+	.list-reset();
+	
+	li {
+		float:left;
+		margin-right:10px;
+		margin-bottom:10px;
+		
+		h2 {
+			font-size:100%
+		}
+		
+		&.uk-active {
+			a {
+				.btn-active() 
+			}
+		}
+	}
+}
+
+#bamboo-tabs {
+	.list-reset();
+}

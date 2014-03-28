@@ -1,0 +1,30 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+Theme: Shoots
+******************************************************************/
+
+
+// Main appearance for background body etc
+html,body {
+	background: @body-background;
+	font-size: @basesize;
+	font-family: @body-font-family;
+	font-weight: @body-font-weight;	
+	color:@text-color
+}
+
+
+// Main container styling
+.container {
+	max-width:@basewidth;
+	margin:0 auto;
+	width:90%;
+	
+	
+	// make sure nested containers are full width
+	.container {
+		width:100%
+	}
+	
+}

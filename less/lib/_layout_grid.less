@@ -1,0 +1,55 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+Theme: Shoots
+******************************************************************/
+
+.col,
+.widget {
+  position: relative;
+  float: left;
+  width:100%
+}
+
+// column mixins so we can use them later
+.col-width-1()  { width: 5.801104972%;  }       /* 4.85%;  } /* grid_1  */
+.col-width-2()  { width: 14.364640883%; }       /* 13.45%; } /* grid_2  */
+.col-width-3()  { width: 22.928176794%; }       /* 22.05%; } /* grid_3  */
+.col-width-4()  { width: 31.491712705%; }       /* 30.75%; } /* grid_4  */
+.col-width-5()  { width: 40.055248616%; }       /* 39.45%; } /* grid_5  */
+.col-width-6()  { width: 48.618784527%; }       /* 48%;    } /* grid_6  */
+.col-width-7()  { width: 57.182320438000005%; } /* 56.75%; } /* grid_7  */
+.col-width-8()  { width: 65.74585634900001%; }  /* 65.4%;  } /* grid_8  */
+.col-width-9()  { width: 74.30939226%; }        /* 74.05%; } /* grid_9  */
+.col-width-10() { width: 82.87292817100001%; }  /* 82.7%;  } /* grid_10 */
+.col-width-11() { width: 91.436464082%; }       /* 91.35%; } /* grid_11 */
+.col-width-12() { width: 99.999999993%; }       /* 100%;   } /* grid_12 */
+.fifths() {width:17.79%}
+
+
+
+// Base Grid
+.col-1 {.col-width-1;}     
+.col-2 {.col-width-2;}
+.col-3 {.col-width-3;}
+.col-4 {.col-width-4;}
+.col-5 {.col-width-5;}
+.col-6 {.col-width-6;}
+.col-7 {.col-width-7;}
+.col-8 {.col-width-8;}
+.col-9 {.col-width-9;}
+.col-10 {.col-width-10;}
+.col-11 {.col-width-11;}
+.col-12 {.col-width-12;}
+
+
+// Margin applied to all cols
+.col,
+.widget {  margin-left: 2.762430939%;}
+
+
+// Remove margin on first col
+.first,
+.widget:first-child{
+  margin-left: 0 !important;
+}

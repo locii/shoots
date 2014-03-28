@@ -1,0 +1,6 @@
+/* global redux, redux_opts *//*
+ * Field Sorter jquery function
+ * Based on
+ * [SMOF - Slightly Modded Options Framework](http://aquagraphite.com/2011/09/slightly-modded-options-framework/)
+ * Version 1.4.2
+ */jQuery(function(){jQuery(".redux-sorter").each(function(){var e=jQuery(this).attr("id");jQuery("#"+e).find("ul").sortable({items:"li",placeholder:"placeholder",connectWith:".sortlist_"+e,opacity:.8,stop:function(e,t){var n=redux.sorter[jQuery(this).attr("data-id")],r=jQuery(this).find("h3").text();if(n&&n[r])if(jQuery(this).children("li").length>=n[r]){jQuery(this).addClass("filled");jQuery(this).children("li").length>n[r]&&jQuery(t.sender).sortable("cancel")}else jQuery(this).removeClass("filled")},update:function(e,t){var n=redux.sorter[jQuery(this).attr("data-id")],r=jQuery(this).find("h3").text();if(n&&n[r])if(jQuery(this).children("li").length>=n[r]){jQuery(this).addClass("filled");jQuery(this).children("li").length>n[r]&&jQuery(t.sender).sortable("cancel")}else jQuery(this).removeClass("filled");jQuery(this).find(".position").each(function(){var e=jQuery(this).parent().attr("id"),t=jQuery(this).parent().parent().attr("data-group-id");redux_change(jQuery(this));var n=jQuery(this).parent().parent().parent().attr("id");jQuery(this).prop("name",redux.args.opt_name+"["+n+"]["+t+"]["+e+"]")})}})})});

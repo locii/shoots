@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+	<option>
+	    <type>text</type>
+	    <title>Offcanvas Bar Width</title>
+	    <id>offcanvas-bar-width</id>
+	    <required>1</required>
+	    <default>250px</default>
+	    <desc>Set the width for the offcanvas panel.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Offcanvas Panel Color</title>
+	    <id>offcanvas-panel-color</id>
+	    <default>#fff</default>
+	    <required>1</required>
+	    <desc>Select the colour for text elements in the off canvas panel</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Offcanvas Link Color</title>
+	    <id>offcanvas-panel-link-color</id>
+	    <required>1</required>
+	    <default>#eee</default>
+	    <desc>Set the color of links in the offcanvas panel.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Offcanvas Link Hover Color</title>
+	    <id>offcanvas-panel-link-hover-color</id>
+	    <required>1</required>
+	    <default>#ccc</default>
+	    <desc>Set the hover color of links in the offcanvas panel.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Offcanvas Background</title>
+	    <id>offcanvas-bar-background</id>
+	    <required>1</required>
+	    <default>#333</default>
+	    <desc>Set the background color for the Offcanvas panel..</desc>
+	</option>
+</options>

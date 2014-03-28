@@ -1,0 +1,314 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+Theme: Shoots
+******************************************************************/
+
+/*********************
+CLEARFIXIN'
+*********************/
+
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+	clear:both;
+  zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+
+
+/*********************
+TOOLS
+*********************/
+
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ 
+.image-replacement {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+@sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
+@serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
+
+
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the 
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('../fonts/font-name.eot');
+    	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/font-name.woff') format('woff'),
+             url('../fonts/font-name.ttf') format('truetype'),
+             url('../fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+
+/* 
+use the best ampersand 
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif;
+  font-style: italic;
+}
+
+
+/*********************
+BORDER RADIUS
+*********************/
+
+/* 
+NOTE: For older browser support (and some mobile), 
+don't use the shorthand to define *different* corners. 
+
+USAGE: .border-radius(4px); 
+
+*/
+.border-radius(@radius: 4px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+
+/*********************
+TRANISTION
+*********************/
+
+/* .transition(all,2s); */
+.transition(@what: all, @time: 0.2s, @transition: ease-in-out) {
+	-webkit-transition: @what @time @transition;
+	-moz-transition:    @what @time @transition;
+	-ms-transition:     @what @time @transition;
+	-o-transition:      @what @time @transition;
+	transition:         @what @time @transition;
+}
+
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdo it.
+*********************/
+
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+.css-gradient(@from: #dfdfdf, @to: #f8f8f8) {
+	background-color: @to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+	background-image: -webkit-linear-gradient(top, @from, @to);
+	background-image: -moz-linear-gradient(top, @from, @to);
+	background-image: -o-linear-gradient(top, @from, @to);
+	background-image: linear-gradient(to bottom, @from, @to);
+}
+
+/*********************
+BOX SHADOW
+*********************/
+
+/* .boxShadow(0,0,4px,0,#444); */
+.boxShadow(@x: 0, @y: 0, @radius: 4px, @spread: 0, @color: rgba(0,0,0,0.5)) when (isnumber(@x)) {
+	-webkit-box-shadow: @x @y @radius @spread @color;
+	   -moz-box-shadow: @x @y @radius @spread @color;
+			box-shadow: @x @y @radius @spread @color; 
+}
+/* .boxShadow(none); */
+.boxShadow(@x: none) when (iskeyword(@x)) {
+	-webkit-box-shadow: @x;
+	   -moz-box-shadow: @x;
+			box-shadow: @x; 
+}
+
+
+
+// Pallette
+.primary1 () {
+	background: darken(@primary, 15%);
+	border: 0;
+	color: #fff
+}
+
+.primary2 () {
+	background: lighten(@primary, 15%);
+	border: 0;
+	color: #fff
+}
+
+
+.secondary1 () {
+	background: darken(@secondary, 15%);
+	border: 0;
+	color: #fff
+}
+
+.secondary2 () {
+	background: lighten(@secondary, 15%);
+	border: 0;
+	color: darken(@secondary, 30%)
+}
+
+
+.small() {
+	font-size:85%;
+	line-height:2em;
+}
+
+.zenborder () {
+	border:1px solid @border-color
+}
+
+
+
+
+
+
+.noshadow () {
+	text-shadow: none
+}
+
+
+// Display Items
+.divider-style () {
+	border-bottom:1px solid @border-color;
+}
+
+.divider-style-top () {
+	border-top:1px solid @border-color;
+}
+
+.myshadow() {
+	.box-shadow(inset 0px 0px 4px rgba(0,0,0,.06));
+}	
+
+.btn-state() {
+	padding: 4px 12px;
+	color:@btn-color !important;
+	background: @btn-background !important;
+	border: 1px solid darken(@btn-background,4%) !important;
+	text-decoration:none;
+	
+	outline:0;
+	
+	.transition();
+	
+		&:hover {
+			color:@btn-hover-color !important;
+			background: @btn-background-hover !important;
+			border: 1px solid darken(@btn-background-hover,4%) !important;
+			text-decoration:none;
+			border-radius:0
+		}	
+}
+
+.btn-active() {
+	
+			color:@btn-hover-color !important;
+			background: @btn-background-hover !important;
+			border: 1px solid darken(@btn-background-hover,4%) !important;
+			text-decoration:none
+	
+}
+
+
+.inverse-btn-state() {
+	padding: 4px 12px;
+	color:@btn-color !important;
+	background: @secondary !important;
+	border: 1px solid darken(@secondary,4%) !important;
+	text-decoration:none;
+	
+	outline:0;
+	
+	.transition();
+	
+		&:hover {
+			color:@btn-hover-color !important;
+			background: @primary !important;
+			border: 1px solid darken(@primary,4%) !important;
+			text-decoration:none;
+			border-radius:0
+		}	
+}
+
+
+
+
+
+.textshadow() {
+	  text-shadow:1px 1px 0 rgba(255,255,255, 0.3);
+}
+
+.box-shadow() {
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.img-border() {
+	.box-shadow(0px 0px 2px rgba(0,0,0,.2));
+	background: #fff !important;
+	padding: 4px;
+	max-width: 98%;
+	margin-bottom: 20px;
+}
+
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+
+
+
+   
+   .resetmodal {
+   		position:relative;
+   		width:auto !important;
+   		left:auto!important;
+   		top:auto!important;
+   		.box-shadow(none);
+   		.border-radius(0)!important;
+   }
+   
+   .box-shadow (@string) {
+   	-webkit-box-shadow: @string;
+   	-moz-box-shadow:    @string;
+   	box-shadow:         @string;
+   }
+   
+   
+     

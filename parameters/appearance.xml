@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+	<option>
+	    <type>color</type>
+	    <title>Primary color</title>
+	    <id>primary</id>
+	    <required>1</required>
+	    <desc>Select the primary color you want to use for your theme.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Secondary color</title>
+	    <id>secondary</id>
+	    <required>1</required>
+	    <desc>Select the secondary color you want to use for your theme.</desc>
+	</option>
+	<option>
+	     <type>divide</type>
+	     <required>1</required>
+	     <id>divide3</id>
+	 </option>
+	<option>
+	    <type>color</type>
+	    <title>Body Background</title>
+	    <id>body-background</id>
+	    <required>1</required>
+	    <desc>Set the background colour for the theme.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Text Color</title>
+	    <id>text-color</id>
+	    <required>1</required>
+	    <desc>Set the text colour for the theme.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Border Color</title>
+	    <id>border-color</id>
+	    <required>1</required>
+	    <desc>Set the border colour for the theme.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Heading Color</title>
+	    <id>heading-color</id>
+	    <required>1</required>
+	    <desc>Set the heading colour for the theme.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Link Color</title>
+	    <id>link-color</id>
+	    <required>1</required>
+	    <desc>Set the link colour for the theme.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Link Color Hover</title>
+	    <id>link-color-hover</id>
+	    <required>1</required>
+	    <desc>Set the link hover colour for the theme.</desc>
+	</option>
+	<option>
+	     <type>divide</type>
+	     <required>1</required>
+	     <id>divide3</id>
+	 </option> 
+	<option>
+	    <type>color</type>
+	    <title>Navbar background</title>
+	    <id>navbar-default-bg</id>
+	    <required>1</required>
+	    <desc>Set the background color for the theme.</desc>
+	</option> 
+	<option>
+	    <type>color</type>
+	    <title>Navbar Link color</title>
+	    <id>navbar-default-link-color</id>
+	    <required>1</required>
+	    <desc>Set the default link color for the navbar theme.</desc>
+	</option> 
+	<option>
+	    <type>color</type>
+	    <title>Navbar Link background</title>
+	    <id>navbar-default-link-bg</id>
+	    <required>1</required>
+	    <desc>Set the link background color for the navbar theme.</desc>
+	</option> 
+	<option>
+	    <type>color</type>
+	    <title>Navbar Link hover background</title>
+	    <id>navbar-default-link-hover-bg</id>
+	    <required>1</required>
+	    <desc>Set the link hover background color for the navbar theme.</desc>
+	</option> 
+	<option>
+	    <type>color</type>
+	    <title>Navbar Link hover color</title>
+	    <id>navbar-default-link-hover-color</id>
+	    <required>1</required>
+	    <desc>Set the link color hover for the navbar theme.</desc>
+	</option> 
+	 <option>
+	     <type>divide</type>
+	     <required>1</required>
+	     <id>divide3</id>
+	 </option>    
+	 <option>
+	     <type>color</type>
+	     <compiler>true</compiler>
+	     <title>Dropdown background</title>
+	     <id>dropdown-bg</id>
+	     <required>1</required>
+	     <desc>Set the background color for the theme.</desc>
+	 </option> 
+	 <option>
+	     <type>color</type>
+	     <compiler>true</compiler>
+	     <title>Dropdown link color</title>
+	     <id>dropdown-link-color</id>
+	     <required>1</required>
+	     <desc>Set the link color for the dropdown menu.</desc>
+	 </option> 
+	 <option>
+	     <type>color</type>
+	     <compiler>true</compiler>
+	     <title>Dropdown link color hover</title>
+	     <id>dropdown-link-color-hover</id>
+	     <required>1</required>
+	     <desc>Set the link hover color for the dropdown menu.</desc>
+	 </option> 
+	 <option>
+	     <type>color</type>
+	     <compiler>true</compiler>
+	     <title>Dropdown link top border</title>
+	     <id>dropdown-link-border-top</id>
+	     <required>1</required>
+	     <desc>Set the top border for links in the drop down menu.</desc>
+	 </option> 
+	 <option>
+	     <type>color</type>
+	     <compiler>true</compiler>
+	     <title>Dropdown link bottom border</title>
+	     <id>dropdown-link-border-bottom</id>
+	     <required>1</required>
+	     <desc>Set the bottom border for links in the drop down menu.</desc>
+	</option>   
+	<option>
+	     <type>divide</type>
+	     <required>1</required>
+	     <id>divide3</id>
+	 </option>
+	 <option>
+	     <type>color</type>
+	     <compiler>true</compiler>
+	     <title>Button Text Color</title>
+	     <id>btn-color</id>
+	     <required>1</required>
+	     <desc>Select the color for button text.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Button Text Hover Color</title>
+	    <id>btn-hover-color</id>
+	    <required>1</required>
+	    <desc>Select the hover color for button text.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Button Background</title>
+	    <id>btn-background</id>
+	    <required>1</required>
+	    <desc>Select the background color you want to use for all button.</desc>
+	</option>
+	<option>
+	    <type>color</type>
+	    <title>Button Hover</title>
+	    <id>btn-background-hover</id>
+	    <required>1</required>
+	    <desc>Select the background color you want to use for all button hovers.</desc>
+	 </option>
+</options>

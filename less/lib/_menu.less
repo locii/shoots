@@ -1,0 +1,189 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+Theme: Shoots
+******************************************************************/
+
+
+
+/* Menus to the right */
+.zenright ul {float: right}
+
+/* Menus to the left */
+.zenleft ul {float: left}
+
+/* menus in the middle */
+.zencenter ul 
+	{
+		text-align:center;
+		float:none !important;
+
+		
+	
+		li { 
+			display:inline-block;
+			float:none !important;
+			
+
+			a,
+			.separator {
+				display:inline-block;
+				float:none !important
+			}
+			li {
+				display:block;
+				float:left!important;
+				text-align: left;
+				width: 100%;
+				text-indent: 0 !important;
+
+				a {width:100%}
+				
+			}
+
+		}
+}
+
+// Used to make sure ul is always 100%
+.inner {
+	float:left;
+	width:100%;
+}
+
+
+// Menu base for above collapse
+#navwrap {
+	&.hide-menu,
+	&.collapse-menu {
+		 ul {
+			display:block !important
+		}
+		
+		.toggle-menu {
+			display:none
+		}
+	}
+	
+	
+	
+	&.collapse-menu {
+	
+		ul {
+			
+			width:auto;
+			position:absolute;
+			z-index:10;
+			display:block;
+			li {
+			
+			}
+		}
+		.toggle-menu {
+			display:block;
+		}
+	}
+	
+}
+
+
+
+// Below mostly comes from Bones
+// Likely to be overwritten in other files.
+// Leave as defaults
+
+.nav {
+	border: 0;
+	
+	ul {
+		margin-top:0;
+	}
+	
+	li {
+		float: left;
+		position: relative;
+
+		a {
+			border-bottom: 0;
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				background-color: #dedede;
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			margin-top: 0;
+			border: 1px solid #ccc;
+			border-top: 0;
+			position: absolute;
+			overflow: hidden;
+			visibility: hidden;
+			z-index: 8999;
+
+			li {
+
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover ul {
+			top: auto;
+			overflow: visible;
+			visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {}
+	}  /* end current highlighters */
+
+} /* end .nav */

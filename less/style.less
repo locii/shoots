@@ -1,0 +1,57 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+
+Stylesheet: typography
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+******************************************************************/
+
+//
+// IMPORTING STYLES
+//
+
+
+// Theme Variables that do not get overwritten by template settings
+@import "variables-core.less";
+
+// This file gets written to the server based on changes in the admin.
+// Uncomment this to avoid those settings takin effect.
+@import "variables-template.less";
+
+
+// import the main bones stylesheets
+@import "lib/framework.less";
+
+
+// Base reset on top of bones
+@import "base.less";
+
+
+// Menu
+@import "menu.less";
+
+// Offcanvas
+@import "offcanvas.less";
+
+
+//Layout
+@import "header.less";
+@import "banner.less";
+@import "search.less";
+@import "layout.less";
+@import "sidebar.less";
+
+
+// Appearance
+@import "appearance.less";
+@import "widgets.less";
+@import "content.less";
+@import "posts.less";
+@import "pages.less";
+
+// Extra
+@import "totop.less";

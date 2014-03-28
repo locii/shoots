@@ -1,0 +1,59 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+Theme: Shoots
+******************************************************************/
+
+
+#navwrap {
+	
+	&.collapse-menu {
+	
+		ul {
+			clear:both;
+			background:@dropdown-bg;
+			position:relative;
+			z-index:10;
+			display:none;
+			float:left;
+			width:100%;
+			
+			li {
+				
+				a {
+					background:@dropdown-bg;
+					color:@dropdown-link-color;
+					padding-left:20px;
+					float:left;
+					width:100%;
+				}
+			}
+			
+			// Sub level
+			ul {
+			
+				box-shadow:none;
+				padding:0;
+				display:block;
+				
+				li a{
+					line-height:3em;
+					height:auto;
+					padding-left:40px;
+				}
+			}
+		}
+		
+		.toggle-menu {
+			display:block;
+		}
+	}
+}
+
+.sticky {
+	#navwrap {
+		position:relative !important;
+		z-index:998
+	}
+}
+

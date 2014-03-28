@@ -1,0 +1,107 @@
+/******************************************************************
+Site Name: Bamboo Framework
+Author: Bamboothemes
+Theme: Shoots
+******************************************************************/
+
+
+#respond{
+	margin: 30px 0;
+	padding-bottom: 2.2em;
+	float:left;
+	width:100%;
+	clear:both;
+	
+	ul {
+		.list-reset();
+	}
+
+	
+	form {
+		margin: 0.75em 0;
+
+		li {
+			list-style-type: none;
+			clear: both;
+			margin-bottom: 0.7335em;
+
+			label,
+			small {
+				display: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url],
+		
+		textarea {
+			padding: 10px 14px;
+			background: @form-background;
+			border: 1px solid @border-color;
+			line-height: 2em;
+			width:100%;
+			
+			
+			&:focus {
+				background: #fff;
+			}
+
+			/* form validation */
+			&:invalid {
+				outline: none;
+				border-color: #fbc2c4;
+				background-color: #f6e7eb;
+				-webkit-box-shadow: none;
+				   -moz-box-shadow: none;
+				    -ms-box-shadow: none;
+						box-shadow: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url] {
+			max-width: 400px;
+			min-width: 250px;
+		}
+
+		textarea {
+			resize: none;
+			width: 100%;
+			height: 150px;
+		}
+
+	}
+}
+
+	/* comment submit button */
+	#submit {
+		.btn-state();
+	}
+
+	/* comment form title */
+	#comment-form-title {
+		margin: 0 0 1.1em;
+	}
+
+	/* cancel comment reply link */
+	#cancel-comment-reply {
+		a {}
+	}
+
+	/* logged in comments */
+	.comments-logged-in-as {}
+
+	/* allowed tags */
+	.form-allowed-tags {
+		margin: 1.5em 10px 0.7335em 0;
+		font-size:90%;
+		
+		.alert-info
+	}
+
+	/* no comments */
+	.nocomments {
+		margin: 0 20px 1.1em;
+	}
