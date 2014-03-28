@@ -290,22 +290,17 @@ function bones_comments( $comment, $args, $depth ) {
 
 /************* Adds UI Kit core js files *************/
 
-function add_uikit() {
+
+function add_theme_scripts() {
 	wp_enqueue_script(
-		'uikit',
-		get_stylesheet_directory_uri() . '/js/uikit.min.js',
-		array( 'jquery' )
-	);
-	
-	wp_enqueue_script(
-		'sticky',
-		get_stylesheet_directory_uri() . '/js/sticky.js',
+		'theme_scripts',
+		get_stylesheet_directory_uri() . '/js/theme.min.js',
 		array( 'jquery' )
 	);
 	
 }
 
-add_action( 'wp_enqueue_scripts', 'add_uikit' );
+add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 
 
