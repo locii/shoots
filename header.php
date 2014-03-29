@@ -79,14 +79,3 @@ global $bamboo;
 		<?php bamboo::display_widget('banner') ?>
 		
 		<section id="main" class="<?php if($bamboo['breadcrumb']) {?>with-breadcrumb<?php } ?> page-featured page">
-			<div id="content" class="container <?php echo $layout_type; ?>">
-				<div id="inner-content" class="container clearfix">
-					
-					<div id="breadcrumb">
-						<?php the_breadcrumb(); ?>
-					</div>
-					
-					<?php // Small compromise on not adding pull classes for three cols
-						if($layout =="5") { 
-							get_sidebar();
-						} ?>
