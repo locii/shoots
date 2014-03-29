@@ -1,4 +1,9 @@
 <?php
+
+	// No direct Access
+	defined('ABSPATH') or die("Cannot access pages directly.");
+	
+	
 	/**
 	 * Show page title and content
 	 */

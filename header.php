@@ -1,3 +1,7 @@
+<?php
+// File Security Check
+defined('ABSPATH') or die("Cannot access pages directly.");
+?>
 <!doctype html>
 
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->

@@ -1,4 +1,10 @@
-<?php global $bamboo; ?>
+<?php 
+
+// No direct Access
+defined('ABSPATH') or die("Cannot access pages directly.");
+
+
+global $bamboo; ?>
 
 <h1>
 	<a href="<?php echo home_url(); ?>" rel="nofollow">

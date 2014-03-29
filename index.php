@@ -1,4 +1,9 @@
-<?php global $bamboo;
+<?php 
+
+// No direct Access
+defined('ABSPATH') or die("Cannot access pages directly.");
+
+global $bamboo;
 	
 	// Logic for sidebar widths	
 	$layout = $bamboo['layout'];

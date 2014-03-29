@@ -1,3 +1,9 @@
+<?php 
+
+// No direct Access
+defined('ABSPATH') or die("Cannot access pages directly.");
+
+?>
 <article id="post-0" class="post no-results not-found">
 	<header class="entry-header">
 		<h1 class="entry-title">Nothing Found</h1>

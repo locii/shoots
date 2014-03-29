@@ -1,4 +1,9 @@
-<?php global $bamboo;?>
+<?php 
+
+// No direct Access
+defined('ABSPATH') or die("Cannot access pages directly.");
+
+global $bamboo;?>
 
 <nav role="navigation" data-uk-sticky id="navwrap" class="<?php echo $bamboo['menu-align'];?> <?php echo $bamboo['mobile-menu']; ?>">	
 	<div class="container">

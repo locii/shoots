@@ -1,5 +1,9 @@
 <?php 
 
+// No direct Access
+defined('ABSPATH') or die("Cannot access pages directly.");
+
+
 	global $bamboo;
 	
 	if ( is_active_sidebar( 'sidebar-primary' ) ) : ?>

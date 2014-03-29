@@ -1,4 +1,9 @@
 <?php 
+
+// No direct Access
+defined('ABSPATH') or die("Cannot access pages directly.");
+
+
 /*
 Template Name: Grid
 Description: A grid page template
@@ -32,12 +37,6 @@ global $bamboo;
 	}
 	
 	get_header(); ?>
-
-<?php
-/**
- * Move the styles below into your stylesheet
- */
-?>
 
 
 <section id="main" class="<?php if($bamboo['breadcrumb']) {?>with-breadcrumb<?php } ?> page-grid page">

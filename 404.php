@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+// No direct Access
+defined('ABSPATH') or die("Cannot access pages directly.");
+
+get_header(); ?>
 
 			<div id="content">
 

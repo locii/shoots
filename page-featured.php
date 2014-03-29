@@ -34,9 +34,10 @@ global $bamboo;
 	get_header(); ?>
 
 <?php
-/**
- * Move the styles below into your stylesheet
- */
+
+// No direct Access
+defined('ABSPATH') or die("Cannot access pages directly.");
+
 ?>
 
 

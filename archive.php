@@ -1,5 +1,9 @@
-<?php global $bamboo;
-	
+<?php
+// No direct Access
+defined('ABSPATH') or die("Cannot access pages directly.");
+
+global $bamboo;
+	 
 	// Logic for sidebar widths
 	if($bamboo['cpt_layout_toggle']) {
 		$layout = $bamboo['archive_layout'];

@@ -1,4 +1,9 @@
 <?php 
+
+// No direct Access
+defined('ABSPATH') or die("Cannot access pages directly.");
+
+
 /*
 Template Name: Tabs
 Description: A tabbed layout template
@@ -32,13 +37,6 @@ global $bamboo;
 	}
 	
 	get_header(); ?>
-
-<?php
-/**
- * Move the styles below into your stylesheet
- */
-?>
-
 
 <section id="main" class="<?php if($bamboo['breadcrumb']) {?>with-breadcrumb<?php } ?> page-tabs page">
 	<div id="content" class="container <?php echo $layout_type; ?>">
