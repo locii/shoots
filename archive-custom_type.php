@@ -3,37 +3,7 @@
 // No direct Access
 defined('ABSPATH') or die("Cannot access pages directly.");
 
-global $bamboo;
-	
-	// Logic for sidebar widths
-	if($bamboo['cpt_layout_toggle']) {
-		$layout = $bamboo['archive_layout'];
-		$mainwidth = $bamboo['archive-main-width'];
-	} else {
-		$layout = $bamboo['layout'];
-		$mainwidth = $bamboo['main-width'];
-	}
-	
-
-	if($layout == 0) {
-		$mainwidth = "12";
-		$layout_type = "full-width";
-	}
-	
-	if($layout == 1) {
-		$layout_type = "main-left two-col";
-	} elseif ($layout == 2) {
-		$layout_type = "main-right two-col";
-	} elseif ($layout == 3) {
-		$layout_type = "main-right three-col";
-	} elseif ($layout == 4) {
-		$layout_type = "main-left three-col";
-	} elseif ($layout == 5) {
-		$layout_type = "left-mid-right three-col";
-	}
-	
-	
-	get_header(); ?>
+get_header(); ?>
 
 
 			<div id="content" class="container <?php echo $layout_type; ?>">

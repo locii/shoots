@@ -4,10 +4,22 @@
 defined('ABSPATH') or die("Cannot access pages directly.");
 
 
-global $bamboo ?>
+global $bamboo; ?>
 
+
+			<?php if($layout > 0 && $layout < 5) { 
+				get_sidebar();
+			} ?>
+				
+			<?php if($layout > 2) { 
+				get_sidebar('secondary');
+			} ?>
+			
 	
-	
+			</div>
+		</div>
+	</section>
+	<!-- Close main area -->
 	
 	<footer class="footer" role="contentinfo">
 		<div class="container">

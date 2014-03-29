@@ -4,6 +4,8 @@
 defined('ABSPATH') or die("Cannot access pages directly.");
 
 
+//include(locate_template('layout-logic.php'));
+
 /*
 Template Name: Grid
 Description: A grid page template
@@ -36,25 +38,11 @@ global $bamboo;
 		$layout_type = "left-mid-right three-col";
 	}
 	
+	
+	
 	get_header(); ?>
 
-
-<section id="main" class="<?php if($bamboo['breadcrumb']) {?>with-breadcrumb<?php } ?> page-grid page">
-	<div id="content" class="container <?php echo $layout_type; ?>">
-		<div id="inner-content" class="container clearfix">
-			
-			
-			<div id="breadcrumb">
-				<?php the_breadcrumb(); ?>
-			</div>
-			
-			<?php // Small compromise on not adding pull classes for three cols
-				if($layout =="5") { 
-					get_sidebar();
-				} ?>
-				
-				
-				<div id="midcol" class="col col-<?php echo $mainwidth; ?> first" role="main">
+		<div id="midcol" class="col col-<?php echo $mainwidth; ?> first" role="main">
 						
 						<?php bamboo::display_widget('above-content') ?>
 						
@@ -63,15 +51,6 @@ global $bamboo;
 						<?php bamboo::display_widget('below-content') ?>
 				</div>
 
-				<?php if($layout > 0 && $layout < 5) { 
-						get_sidebar();
-					} ?>
-				
-				<?php if($layout > 2) { 
-						get_sidebar('secondary');
-					} ?>
-		</div>
-	</div>
-</section>
+
 
 <?php get_footer(); ?>

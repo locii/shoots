@@ -1,6 +1,9 @@
 <?php
 // File Security Check
 defined('ABSPATH') or die("Cannot access pages directly.");
+
+
+global $bamboo;
 ?>
 <!doctype html>
 
@@ -22,7 +25,6 @@ defined('ABSPATH') or die("Cannot access pages directly.");
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 		<!--[if IE]>
@@ -31,23 +33,10 @@ defined('ABSPATH') or die("Cannot access pages directly.");
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<?php // wordpress head functions ?>
+	
 		<?php wp_head(); ?>
-		<?php // end of wordpress head ?>
-
-		<?php // drop Google Analytics Here ?>
-		<?php // end analytics ?>
-		<?php global $bamboo;
-			$bodyfont = $bamboo['bodyfont'];
-			$logofont = $bamboo['logofont'];
-			$navfont = $bamboo['navfont'];
-			$headingfont = $bamboo['headingfont']; 
-			$logofontsize = $bamboo['logo-font-size'];
-			$basesize = $bamboo['base-font-size'];
-		?>
 		
-		
-
+		<?php echo $bamboo['analytics'];?>
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -88,3 +77,16 @@ defined('ABSPATH') or die("Cannot access pages directly.");
 		
 		
 		<?php bamboo::display_widget('banner') ?>
+		
+		<section id="main" class="<?php if($bamboo['breadcrumb']) {?>with-breadcrumb<?php } ?> page-featured page">
+			<div id="content" class="container <?php echo $layout_type; ?>">
+				<div id="inner-content" class="container clearfix">
+					
+					<div id="breadcrumb">
+						<?php the_breadcrumb(); ?>
+					</div>
+					
+					<?php // Small compromise on not adding pull classes for three cols
+						if($layout =="5") { 
+							get_sidebar();
+						} ?>

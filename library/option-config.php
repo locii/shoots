@@ -1266,13 +1266,13 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 				'title' => __('Extra code & Analytics', 'bamboo-framework'),
 				'fields' => array (
 					array (
-						'id'=>'tracking-code',
+						'id'=>'analytics',
 						'type' => 'textarea',
 						//'required' => array('layout','equals','1'),	
 						'title' => __('Tracking Code', 'bamboo-framework'), 
 						'subtitle' => __('Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.', 'bamboo-framework'),
 						'validate' => 'js',
-						'desc' => 'Validate that it\'s javascript!',
+						'desc' => '',
 					),
 
 				),

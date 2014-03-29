@@ -3,51 +3,9 @@
 // No direct Access
 defined('ABSPATH') or die("Cannot access pages directly.");
 
-global $bamboo;
-	
-	// Logic for sidebar widths
-	if($bamboo['cpt_layout_toggle']) {
-		$layout = $bamboo['single_layout'];
-		$mainwidth = $bamboo['single-main-width'];
-	} else {
-		$layout = $bamboo['layout'];
-		$mainwidth = $bamboo['main-width'];
-	}
+	include(locate_template('layout-logic.php'));
 
-	if($layout == 0) {
-		$mainwidth = "12";
-		$layout_type = "full-width";
-	}
-	
-	if($layout == 1) {
-		$layout_type = "main-left two-col";
-	} elseif ($layout == 2) {
-		$layout_type = "main-right two-col";
-	} elseif ($layout == 3) {
-		$layout_type = "main-right three-col";
-	} elseif ($layout == 4) {
-		$layout_type = "main-left three-col";
-	} elseif ($layout == 5) {
-		$layout_type = "left-mid-right three-col";
-	}
-	
-	
 	get_header(); ?>
-
-	<section id="main" class="<?php if($bamboo['breadcrumb']) {?>with-breadcrumb<?php } ?> single">
-			<div id="content" class="container <?php echo $layout_type; ?>">
-
-				<div id="inner-content" class="container clearfix">
-					
-					<div id="breadcrumb">
-						<?php the_breadcrumb(); ?>
-					</div>
-					<?php // Small compromise on not adding pull classes for three cols
-						if($layout =="5") { 
-							get_sidebar();
-						} ?>
-					
-
 					<div id="midcol" class="col col-<?php echo $mainwidth; ?> first" role="main">
 					
 						<?php bamboo::display_widget('above-content') ?>
@@ -91,20 +49,5 @@ global $bamboo;
 						<?php endif; ?>
 						
 						<?php bamboo::display_widget('below-content') ?>
-						
-												
-					</div>
 
-					<?php if($layout > 0 && $layout < 5) { 
-							get_sidebar();
-						} ?>
-					
-					<?php if($layout > 2) { 
-							get_sidebar('secondary');
-						} ?>
-
-				</div>
-
-			</div>
-	</section>
 <?php get_footer(); ?>

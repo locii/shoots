@@ -390,6 +390,4 @@ function offcanvas_menu() {
 }
 add_action( 'after_setup_theme', 'offcanvas_menu' );
 
-
-
 ?>
