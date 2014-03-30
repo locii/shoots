@@ -12,6 +12,21 @@
 	<?php global $bamboo;?>
 	
 	<?php if ( have_posts() ) : ?>
+	
+		<?php if($bamboo['tab-content']) {  
+		
+			while ( have_posts() ) : the_post(); ?>
+				<header class="entry-header">
+					<h1 class="page-title"><?php the_title(); ?></h1>
+				</header>
+				<div class="entry-content">
+					<?php the_post_thumbnail( 'bones-thumb-900' ); ?>
+					<?php the_content('Read more ...'); ?>
+				</div>
+				<div class="divider tight"></div>
+			<?php endwhile; 
+		} ?>
+
 		<div class="entry-content columns">
 
 		<?php

@@ -1183,19 +1183,43 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'default' => 3,
 					),
 					array (						
+						'id' => 'tab-content',
+						'type' => 'checkbox',
+						'title' => __('Display page content', 'bamboo-framework'),
+						'desc' => 'When enabled the title, featured image and content from the page will be displayed as well as the posts.',
+						'default' => 0,
+					),
+					
+					array (						
 						'id' => 'featured-count',
 						'type' => 'text',
 						'title' => __('Featured Count', 'bamboo-framework'),
 						'desc' => 'The number of posts to show in the featured layout template',
 						'default' => 3,
 					),
+
+					array (						
+						'id' => 'featured-content',
+						'type' => 'checkbox',
+						'title' => __('Display page content', 'bamboo-framework'),
+						'desc' => 'When enabled the title, featured image and content from the page will be displayed as well as the posts.',
+						'default' => 0,
+					),
 					
+										
 					array (						
 						'id' => 'grid-count',
 						'type' => 'text',
 						'title' => __('Grid Count', 'bamboo-framework'),
 						'desc' => 'The number of posts to show in the slideshow layout template',
 						'default' => 3,
+					),
+					array (						
+						'id' => 'grid-content',
+						'type' => 'checkbox',
+						'title' => __('Display page content', 'bamboo-framework'),
+						'desc' => 'When enabled the title, featured image and content from the page will be displayed as well as the posts.',
+						'default' => 0,
 					),
 					array (						
 						'id' => 'grid-columns',
