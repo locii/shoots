@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <options>
 	<option>
+	     <type>heading</type>
+	     <required>1</required>
+	     <id>divide3</id>
+	     <title>Key</title>
+	 </option>
+	<option>
 	    <type>color</type>
 	    <title>Primary color</title>
 	    <id>primary</id>
@@ -15,9 +21,10 @@
 	    <desc>Select the secondary color you want to use for your theme.</desc>
 	</option>
 	<option>
-	     <type>divide</type>
+	     <type>heading</type>
 	     <required>1</required>
 	     <id>divide3</id>
+	     <title>General</title>
 	 </option>
 	<option>
 	    <type>color</type>
@@ -62,10 +69,11 @@
 	    <desc>Set the link hover colour for the theme.</desc>
 	</option>
 	<option>
-	     <type>divide</type>
+	     <type>heading</type>
 	     <required>1</required>
 	     <id>divide3</id>
-	 </option> 
+	     <title>Navbar</title>
+	 </option>
 	<option>
 	    <type>color</type>
 	    <title>Navbar background</title>
@@ -102,10 +110,11 @@
 	    <desc>Set the link color hover for the navbar theme.</desc>
 	</option> 
 	 <option>
-	     <type>divide</type>
-	     <required>1</required>
-	     <id>divide3</id>
-	 </option>    
+	      <type>heading</type>
+	      <required>1</required>
+	      <id>divide3</id>
+	      <title>Dropdown</title>
+	  </option>   
 	 <option>
 	     <type>color</type>
 	     <compiler>true</compiler>
@@ -147,9 +156,10 @@
 	     <desc>Set the bottom border for links in the drop down menu.</desc>
 	</option>   
 	<option>
-	     <type>divide</type>
+	     <type>heading</type>
 	     <required>1</required>
 	     <id>divide3</id>
+	     <title>Buttons</title>
 	 </option>
 	 <option>
 	     <type>color</type>

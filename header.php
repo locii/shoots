@@ -87,10 +87,11 @@ global $bamboo;
 		
 		<section id="main" class="<?php if($bamboo['breadcrumb']) {?>with-breadcrumb<?php } ?>">
 		
-		<?php //
-			$slideshow_pages = $bamboo['pages'];
-			
-			if(in_array($post->ID, $slideshow_pages)) {
+		<?php 
+		
+			if(bamboo::display_extra('slideshow', $post->ID)) {
+				
 				get_template_part('templates/banner', 'slideshow');
+				
 			}
-			?>
+		?>

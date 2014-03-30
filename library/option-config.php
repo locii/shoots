@@ -570,9 +570,10 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						    
 						
 						array(
-						     "type" => "divide",
-						     "id" =>"divide3",
-						 ),
+						    'id'   => 'info_normal',
+						    'type' => 'heading',
+						    'title' => 'Tagline'
+						),	
 						array(
 						    "type" => "text",
 						    "title" => "Tagline",
@@ -625,7 +626,11 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 				    "default" => "80%"),
 				    
 				   	
-				    	
+				    	array(
+				    	    'id'   => 'info_normal',
+				    	    'type' => 'heading',
+				    	    'title' => 'Body Fonts'
+				    	),	
 				    // Body Fonts
 					array(        
 					"type" => "select",
@@ -656,9 +661,10 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					    "placeholder" => "normal"),
 				
 					array(
-					     "type" => "divide",
-					     "id" =>"divide3",
-					 ),
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Heading Font'
+					),	
 					// Heading Fonts
 						array(        
 						"type" => "select",
@@ -689,9 +695,10 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						    "placeholder" => "normal"),
 					
 					array(
-					     "type" => "divide",
-					     "id" =>"divide2",
-					 ),
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Navigation Font'
+					),	
 					 
 						// Nav Fonts
 							array(        
@@ -1050,7 +1057,11 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 				'desc' => __('Settings that control the display of widgets.'),
 				'fields' => array (
 				
-					
+					array(
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Banner Widget Position'
+					),	
 					array(
 					  	'id'=>'banner-widget-align',
 						'type' => 'button_set',
@@ -1072,6 +1083,12 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					),
 					
 					array(
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Above Content Widget Position'
+					),	
+					 
+					array(
 					  	'id'=>'above-content-widget-align',
 						'type' => 'button_set',
 						'title' => __('<strong>Above content widget alignment</strong>', 'bamboo-framework'), 
@@ -1092,7 +1109,11 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					    'default'  => '',
 					),
 					
-					
+					array(
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Below Content Widget Position'
+					),		
 					
 					array(
 					  	'id'=>'below-content-widget-align',
@@ -1114,6 +1135,12 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					    'default'  => '',
 					),
 					
+					array(
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Bottom Widget Position'
+					),		
+					 
 					array(
 					  	'id'=>'bottom-widget-align',
 						'type' => 'button_set',
@@ -1177,9 +1204,10 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 				    "desc" => "The pixel width of the browser when the mobile layout should be triggered.",
 				    "default" => "768px"),
 				array(
-				     "type" => "divide",
-				     "id" =>"divide3",
-				 ),
+				    'id'   => 'info_normal',
+				    'type' => 'heading',
+				    'title' => 'Offcanvas Menu'
+				),	
 				array(
 				    "type" => "text",
 				   	"title" => "<strong>Offcanvas Trigger text</strong>",
@@ -1237,9 +1265,10 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						"default" 		=> '/',
 						),
 					array(
-					     "type" => "divide",
-					     "id" =>"divide3",
-					 ),	
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Author profiles'
+					),
 					array (						
 						'id' => 'author_profile',
 						'type' => 'switch',
@@ -1249,9 +1278,10 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					),
 					
 					array(
-					     "type" => "divide",
-					     "id" =>"divide3",
-					 ),
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Tab page layout'
+					),
 					array (						
 						'id' => 'tab-count',
 						'type' => 'text',
@@ -1268,9 +1298,10 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					),
 					
 					array(
-					     "type" => "divide",
-					     "id" =>"divide3",
-					 ),
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Featured page layout'
+					),
 					array (						
 						'id' => 'featured-count',
 						'type' => 'text',
@@ -1287,42 +1318,44 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'default' => 0,
 					),
 					
+					
+					
 					array(
-					    'id'       => 'opt-gallery',
-					    'type'     => 'gallery',
-					    'title'    => __('Add/Edit Gallery', 'redux-framework-demo'),
-					    'subtitle' => __('Create a new Gallery by selecting existing or uploading new images using the WordPress native uploader', 'redux-framework-demo'),
-					    'desc'     => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Slideshow'
+					),	
+					
+					array(
+					    'id'       => 'slideshow-pages',
+					    'type'     => 'select',
+					    'multi'     => 'true',
+					    'title'    => __('Display slideshowon these pages', 'bamboo-framework'), 
+					    'desc'     => __('Set the pages to display any active banner widgets on.', 'bamboo-framework'),
+					    // Must provide key => value pairs for select options
+					    'options'  => $pagelist,
+					    'default'  => '',
 					),
 					
 					array(
 					    'id'          => 'opt-slides',
 					    'type'        => 'slides',
-					    'title'       => __('Slides Options', 'redux-framework-demo'),
-					    'subtitle'    => __('Unlimited slides with drag and drop sortings.', 'redux-framework-demo'),
-					    'desc'        => __('This field will store all slides values into a multidimensional array to use into a foreach loop.', 'redux-framework-demo'),
+					    'title'       => __('Slides Options', 'bamboo-framework'),
+					    'subtitle'    => __('Unlimited slides with drag and drop sortings.', 'bamboo-framework'),
+					    'desc'        => __('This field will store all slides values into a multidimensional array to use into a foreach loop.', 'bamboo-framework'),
 					    'placeholder' => array(
-					        'title'           => __('This is a title', 'redux-framework-demo'),
-					        'description'     => __('Description Here', 'redux-framework-demo'),
-					        'url'             => __('Give us a link!', 'redux-framework-demo'),
+					        'title'           => __('This is a title', 'bamboo-framework'),
+					        'description'     => __('Description Here', 'bamboo-framework'),
+					        'url'             => __('Give us a link!', 'bamboo-framework'),
 					    ),
 					),
-					array(
-					    'id'       => 'pages',
-					    'type'     => 'select',
-					    'multi'     => 'true',
-					    'title'    => __('Select Option', 'redux-framework-demo'), 
-					    'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
-					    'desc'     => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-					    // Must provide key => value pairs for select options
-					    'options'  => $pagelist,
-					    'default'  => '2',
-					),
+					
 					
 					array(
-					     "type" => "divide",
-					     "id" =>"divide3",
-					 ),			
+					    'id'   => 'info_normal',
+					    'type' => 'heading',
+					    'title' => 'Grid page layout'
+					),		
 					array (						
 						'id' => 'grid-count',
 						'type' => 'text',

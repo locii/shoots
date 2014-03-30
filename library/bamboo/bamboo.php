@@ -7,58 +7,6 @@ global $bamboo;
 
 class bamboo {
 	
-	/**
-		 * The framework instance
-		 *
-		 * @since  3.0.0
-		 */
-		protected static $instance;
-	
-		/**
-		 * The application instance
-		 *
-		 * @since  3.0.0
-		 */
-		public $app;
-	
-		/**
-		 * The document instance
-		 *
-		 * @since  3.0.0
-		 */
-		public $doc;
-	
-		/**
-		 * The params instance
-		 *
-		 * @since  3.0.0
-		 */
-		public $params;
-		
-		
-	/**
-		 * Returns a refernce to the global Zen object, only creating it if it doesn't already exist.
-		 *
-		 * This method must be invoked as: $zen = bamboo::getInstance();
-		 *
-		 * @return  ZenGrid
-		 *
-		 * @since   2.0.0
-		 */
-		public static function getInstance()
-		{
-			// Only create the object if it doesn't exist.
-			if (empty(self::$instance))
-			{
-				self::$instance = new self();
-			}
-	
-			return self::$instance;
-		}
-	
-	
-	
-	
 		public function display_widget($position,$currentpage)
 			{
 						
@@ -89,7 +37,8 @@ class bamboo {
 					if($count == "2.4") {
 						$count="fifths";
 					}
-						
+					
+					ob_start();
 					?>
 						
 					<!-- <?php echo $position; ?> Widget -->
@@ -109,6 +58,33 @@ class bamboo {
 	
 			}
 
+
+	public function display_extra($position,$currentpage)
+			{
+						
+				global $bamboo;
+				
+				$display = 1;
+				$display_banner = $bamboo[$position.'-pages'];
+					
+				// If its just one page in the field check whether we should proceed
+				if(!is_array($display_banner)) {
+							
+					if($display_banner !== $currentpage) {			
+						$display = 0;	
+					}
+				}
+				elseif(in_array("all", $display_banner)) {
+							
+					$display = 1;
+							
+				} elseif (!in_array($currentpage, $display_banner)) {
+					$display = 0;
+				}
+				
+				return $display;
+	
+			}
 	
 	
 
