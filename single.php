@@ -47,7 +47,7 @@ defined('ABSPATH') or die("Cannot access pages directly.");
 					} ?>
 					<div id="midcol" class="col col-<?php echo $mainwidth; ?> first" role="main">
 					
-						<?php bamboo::display_widget('above-content') ?>
+						<?php bamboo::display_widget('above-content',$post->ID) ?>
 						
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						
@@ -87,7 +87,7 @@ defined('ABSPATH') or die("Cannot access pages directly.");
 
 						<?php endif; ?>
 						
-						<?php bamboo::display_widget('below-content') ?>
+						<?php bamboo::display_widget('below-content',$post->ID) ?>
 						</div>
 						
 						<?php if($layout > 0 && $layout < 5) { 

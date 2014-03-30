@@ -30,7 +30,9 @@
 			<footer class="article-footer">
 				<?php the_tags( '<div class="tags"><h3 class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</h3> ', ' ', '</div>' ); ?>
 			
-				<?php if($bamboo['author_profile']) { get_template_part('templates/author', 'profile');} ?>
+				<?php if($bamboo['author_profile']) { 
+						get_template_part('templates/author', 'profile');
+						} ?>
 			</footer>
 
 			<?php comments_template(); ?>

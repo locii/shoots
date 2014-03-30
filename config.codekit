@@ -8970,7 +8970,7 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "bamboo",
+	"displayValue": "Shoots",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "harddrive_gray"
 	},
@@ -9088,7 +9088,7 @@
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
 	"externalServerAddress": "http:\/\/localhost:8888",
-	"externalServerPreviewPathAddition": "wordpress\/bamboo",
+	"externalServerPreviewPathAddition": "wordpress\/shoots",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathRelativePath": "",
 	"hamlAutoOutputPathReplace1": "",

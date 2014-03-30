@@ -54,11 +54,11 @@ global $bamboo;
 				
 				<div id="midcol" class="col col-<?php echo $mainwidth; ?> first" role="main">
 						
-						<?php bamboo::display_widget('above-content') ?>
+						<?php bamboo::display_widget('above-content',$post->ID) ?>
 						
 						<?php get_template_part('templates/content', 'featured'); ?>
 						
-						<?php bamboo::display_widget('below-content') ?>				
+						<?php bamboo::display_widget('below-content',$post->ID) ?>				
 				</div>
 				
 						<?php if($layout > 0 && $layout < 5) { 

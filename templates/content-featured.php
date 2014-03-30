@@ -25,6 +25,7 @@ defined('ABSPATH') or die("Cannot access pages directly.");
 				<div class="divider tight"></div>
 			<?php endwhile; 
 		} ?>
+		
 
 		<div class="entry-content">
 

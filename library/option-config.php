@@ -9,6 +9,8 @@ if ( !class_exists( "ReduxFramework" ) ) {
 	return;
 } 
 
+include('bamboo/options-helper.php');
+
 if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 	class Redux_Framework_sample_config {
 
@@ -341,6 +343,27 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					echo '<p style="display:none" id="'.$theme.'">'.$variables.'</p>';
 				}
 			
+				
+				function getpages() {
+					$pages = array(get_pages());
+					$pages = $pages[0];
+				
+					$pagelist = array('all' => 'All Pages');
+				
+					foreach ($pages as $key => $page) {
+						$title = $page->post_title;
+						$id = $page->ID;
+						array_push($pagelist, $pagelist[$id] = $title);
+					}
+				
+					$pagelist = array_unique($pagelist);
+					
+					return $pagelist;
+				}	
+				
+				// Make the current pages on the site vailable in an array
+				$pagelist = getpages();
+				
 			?>
 			<script>
 			jQuery(document).ready(function(){
@@ -1038,6 +1061,17 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					),
 					
 					array(
+					    'id'       => 'banner-widget-pages',
+					    'type'     => 'select',
+					    'multi'     => 'true',
+					    'title'    => __('Display on these pages', 'bamboo-framework'), 
+					    'desc'     => __('Set the pages to display any active banner widgets on.', 'bamboo-framework'),
+					    // Must provide key => value pairs for select options
+					    'options'  => $pagelist,
+					    'default'  => '',
+					),
+					
+					array(
 					  	'id'=>'above-content-widget-align',
 						'type' => 'button_set',
 						'title' => __('<strong>Above content widget alignment</strong>', 'bamboo-framework'), 
@@ -1045,6 +1079,20 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'options' => array('stacked' => 'Stacked Vertical','side' => 'Stacked Horizontally','doublefirst' => 'Double First','doublelast' => 'Double Last'), //Must provide key => value pairs
 						'default' => 'side',
 					),
+					
+					
+					array(
+					    'id'       => 'above-content-widget-pages',
+					    'type'     => 'select',
+					    'multi'     => 'true',
+					    'title'    => __('Display on these pages', 'bamboo-framework'), 
+					    'desc'     => __('Set the pages to display any active banner widgets on.', 'bamboo-framework'),
+					    // Must provide key => value pairs for select options
+					    'options'  => $pagelist,
+					    'default'  => '',
+					),
+					
+					
 					
 					array(
 					  	'id'=>'below-content-widget-align',
@@ -1056,6 +1104,17 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					),
 					
 					array(
+					    'id'       => 'below-content-widget-pages',
+					    'type'     => 'select',
+					    'multi'     => 'true',
+					    'title'    => __('Display on these pages', 'bamboo-framework'), 
+					    'desc'     => __('Set the pages to display any active banner widgets on.', 'bamboo-framework'),
+					    // Must provide key => value pairs for select options
+					    'options'  => $pagelist,
+					    'default'  => '',
+					),
+					
+					array(
 					  	'id'=>'bottom-widget-align',
 						'type' => 'button_set',
 						'title' => __('<strong>Bottom widget alignment</strong>', 'bamboo-framework'), 
@@ -1064,6 +1123,16 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'default' => 'side',
 					),
 					
+					array(
+					    'id'       => 'bottom-widget-pages',
+					    'type'     => 'select',
+					    'multi'     => 'true',
+					    'title'    => __('Display on these pages', 'bamboo-framework'), 
+					    'desc'     => __('Set the pages to display any active banner widgets on.', 'bamboo-framework'),
+					    // Must provide key => value pairs for select options
+					    'options'  => $pagelist,
+					    'default'  => '',
+					),
 					
 				
 			));	
@@ -1166,7 +1235,11 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'title' => __('Breadcrumb Separator', 'bamboo-framework'),
 						'subtitle'=> __('Enter a character to use for the breadcrumb separator', 'bamboo-framework'),
 						"default" 		=> '/',
-						),	
+						),
+					array(
+					     "type" => "divide",
+					     "id" =>"divide3",
+					 ),	
 					array (						
 						'id' => 'author_profile',
 						'type' => 'switch',
@@ -1175,6 +1248,10 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'default' => 0,
 					),
 					
+					array(
+					     "type" => "divide",
+					     "id" =>"divide3",
+					 ),
 					array (						
 						'id' => 'tab-count',
 						'type' => 'text',
@@ -1190,6 +1267,10 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'default' => 0,
 					),
 					
+					array(
+					     "type" => "divide",
+					     "id" =>"divide3",
+					 ),
 					array (						
 						'id' => 'featured-count',
 						'type' => 'text',
@@ -1206,7 +1287,42 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'default' => 0,
 					),
 					
-										
+					array(
+					    'id'       => 'opt-gallery',
+					    'type'     => 'gallery',
+					    'title'    => __('Add/Edit Gallery', 'redux-framework-demo'),
+					    'subtitle' => __('Create a new Gallery by selecting existing or uploading new images using the WordPress native uploader', 'redux-framework-demo'),
+					    'desc'     => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
+					),
+					
+					array(
+					    'id'          => 'opt-slides',
+					    'type'        => 'slides',
+					    'title'       => __('Slides Options', 'redux-framework-demo'),
+					    'subtitle'    => __('Unlimited slides with drag and drop sortings.', 'redux-framework-demo'),
+					    'desc'        => __('This field will store all slides values into a multidimensional array to use into a foreach loop.', 'redux-framework-demo'),
+					    'placeholder' => array(
+					        'title'           => __('This is a title', 'redux-framework-demo'),
+					        'description'     => __('Description Here', 'redux-framework-demo'),
+					        'url'             => __('Give us a link!', 'redux-framework-demo'),
+					    ),
+					),
+					array(
+					    'id'       => 'pages',
+					    'type'     => 'select',
+					    'multi'     => 'true',
+					    'title'    => __('Select Option', 'redux-framework-demo'), 
+					    'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
+					    'desc'     => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
+					    // Must provide key => value pairs for select options
+					    'options'  => $pagelist,
+					    'default'  => '2',
+					),
+					
+					array(
+					     "type" => "divide",
+					     "id" =>"divide3",
+					 ),			
 					array (						
 						'id' => 'grid-count',
 						'type' => 'text',

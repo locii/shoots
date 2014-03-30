@@ -47,7 +47,7 @@ global $bamboo;
 						
 						<div id="midcol" class="col col-<?php echo $mainwidth; ?> first clearfix archive" role="main">
 							
-							<?php bamboo::display_widget('above-content') ?>
+							<?php bamboo::display_widget('above-content',$post->ID) ?>
 							
 							<?php if (is_category()) { ?>
 								<h1 class="archive-title h2">
@@ -132,7 +132,7 @@ global $bamboo;
 							<?php endif; ?>
 							
 							
-					<?php bamboo::display_widget('below-content') ?>
+					<?php bamboo::display_widget('below-content',$post->ID) ?>
 				</div>
 				
 				<?php if($layout > 0 && $layout < 5) { 

@@ -3,48 +3,57 @@
 // No direct Access
 defined('ABSPATH') or die("Cannot access pages directly.");
 
+	global $bamboo;
 	/**
 	 * Slideshow
 	 */
 	?>
 	
-	
-	<ul class="rslides">
+	<div id="bamboo-slideshow" class="container">
+		
+			<div class="col col-12 first">
+				<ul class="rslides">
 	  
 	
-<?php
-	$args = array( 'numberposts' => '5' );
-	$recent_posts = wp_get_recent_posts($args);
-	
-	foreach( $recent_posts as $recent ){?>
-		<li>
-			<h2>
-		 		<a href="<?php echo get_permalink($recent["ID"]);?>" title="Look <?php echo esc_attr($recent["post_title"]);?>">
-		 		<?php echo $recent["post_title"];?></a>
-		 	</h2>
-		 	<p>
-		 		<?php if ( has_post_thumbnail() ) {
-		 			the_post_thumbnail();
-		 		} ;?>
-		 		<?php echo $recent["post_excerpt"];?>
-		 		
-		 	</p>
-		</li>
-	<?php }
-?>
-</ul>
-	
-	<div id="slideshow-nav"></div>
-	
-	<script src="<?php echo get_template_directory_uri(); ?>/js/responsiveslides.min.js"></script>
-	
-	<script>
-	  jQuery(function($) {
-	    $(".rslides").responsiveSlides({
-	    	pager: true,           // Boolean: Show pager, true or false
-	    	nav: true,             // Boolean: Show navigation, true or false
-	    	navContainer: "#slideshow-nav"       // Selector: Where controls should be appended to, default is after the 'ul'
-	    });
-	  });
-	</script>
+					<?php
+						
+						$slideshow = $bamboo['opt-slides'];
+						
+						foreach( $slideshow as $slide ){
+						
+							$title = $slide['title'];
+							$description = $slide['description'];
+							$link = $slide['url'];
+							$image = $slide['image'];
+					
+						?>
+							<li>
+								<h2><?php echo $title;?></h2>
+								<p><?php echo $description;?></p>
+								
+								<a href="<?php echo $link;?>">
+									<img src="<?php echo $image;?>" alt="<?php echo $title;?>" />
+								</a>
+								
+							</li>
+						<?php }
+					?>
+					</ul>
+						
+						<div id="slideshow-nav"></div>
+						
+						<script src="<?php echo get_template_directory_uri(); ?>/library/js/responsiveSlides.min.js"></script>
+						
+						<script>
+						  jQuery(function($) {
+						    $(".rslides").responsiveSlides({
+						    	pager: true,           // Boolean: Show pager, true or false
+						    	nav: true,             // Boolean: Show navigation, true or false
+						    	navContainer: "#slideshow-nav"       // Selector: Where controls should be appended to, default is after the 'ul'
+						    });
+						  });
+						</script>
+				</div>
+			</div>
+
 	

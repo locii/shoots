@@ -59,34 +59,54 @@ class bamboo {
 	
 	
 	
-		public function display_widget($position)
+		public function display_widget($position,$currentpage)
 			{
 						
 				if ( is_active_sidebar( $position) ) : 
 				
-				global $bamboo;
+					global $bamboo;
 				
-				$count = 12/self::count_widgets($position);
-				
-				if($count == "2.4") {
-					$count="fifths";
-				}
-				
-				?>
-				
-				<!-- Banner Widget -->
-				<section id="<?php echo $position; ?>wrap" class="clearfix widgets widgets-<?php echo $count;?> <?php echo $bamboo[''.$position.'-widget-align'];?>">
-					<div class="container">
-						<div id="<?php echo $position; ?>">
-							<?php dynamic_sidebar( $position ); ?>
+					$display_banner = $bamboo[$position.'-widget-pages'];
+					
+					// If its just one page in the field check whether we should proceed
+					if(!is_array($display_banner)) {
+							
+						if($display_banner !== $currentpage) {			
+							return;	
+							}
+					}
+					elseif(in_array("all", $display_banner)) {
+							
+						// proceed
+							
+					} elseif (!in_array($currentpage, $display_banner)) {
+							return;
+					}
+						
+					$count = 12/self::count_widgets($position);
+							
+					// In case 5 widgets are published
+					if($count == "2.4") {
+						$count="fifths";
+					}
+						
+					?>
+						
+					<!-- <?php echo $position; ?> Widget -->
+					<section id="<?php echo $position; ?>wrap" class="clearfix widgets widgets-<?php echo $count;?> <?php echo $bamboo[''.$position.'-widget-align'];?>">
+						<div class="container">
+							<div id="<?php echo $position; ?>">
+								<?php dynamic_sidebar( $position ); ?>
+							</div>
 						</div>
-					</div>
-				</section>
-				
-				
-				<?php return ob_get_clean();
-				
-				endif; 
+					</section>
+						
+					<?php 
+						
+						return ob_get_clean();
+						
+				endif;
+	
 			}
 
 	

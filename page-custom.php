@@ -57,7 +57,7 @@ Template Name: Custom Page Example
 			
 			<div id="midcol" class="eightcol first clearfix" role="main">
 	
-	<?php bamboo::display_widget('above-content') ?>
+	<?php bamboo::display_widget('above-content',$post->ID) ?>
 								
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -103,7 +103,7 @@ Template Name: Custom Page Example
 
 	<?php endif; ?>
 	
-	<?php bamboo::display_widget('below-content') ?>
+	<?php bamboo::display_widget('below-content',$post->ID) ?>
 		</div>
 		
 		<?php if($layout > 0 && $layout < 5) { 

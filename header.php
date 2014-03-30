@@ -50,17 +50,22 @@ global $bamboo;
 		<header id="headerwrap" class="clearfix" role="banner">
 			<div class="container">
 				<div id="logo" class="<?php echo $bamboo['logo-align'];?> col col-6 first">
-					<?php if($bamboo['logotype'] == "text") { 
-						get_template_part('templates/logo', 'text'); 
-					} else {
-						get_template_part('templates/logo', 'image');
-					} ?>
 					
-					<?php 
+					<?php if($bamboo['logotype'] == "text") { 
+					
+						get_template_part('templates/logo', 'text'); 
+					
+					} else {
+					
+						get_template_part('templates/logo', 'image');
+					} 
+					
 						if(isset($bamboo['tagline'])) {
+					
 							get_template_part('templates/logo', 'tagline');
 						}
 					?>
+					
 				</div>
 				<?php if ( is_active_sidebar('search') ) { ?>
 					<div id="search" class="col col-6">
@@ -76,6 +81,16 @@ global $bamboo;
 		<?php } ?>
 		
 		
-		<?php bamboo::display_widget('banner') ?>
+		<?php bamboo::display_widget('banner',$post->ID); ?>
 		
-		<section id="main" class="<?php if($bamboo['breadcrumb']) {?>with-breadcrumb<?php } ?> page-featured page">
+		
+		
+		<section id="main" class="<?php if($bamboo['breadcrumb']) {?>with-breadcrumb<?php } ?>">
+		
+		<?php //
+			$slideshow_pages = $bamboo['pages'];
+			
+			if(in_array($post->ID, $slideshow_pages)) {
+				get_template_part('templates/banner', 'slideshow');
+			}
+			?>
