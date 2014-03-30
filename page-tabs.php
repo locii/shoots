@@ -50,7 +50,7 @@ defined('ABSPATH') or die("Cannot access pages directly.");
 							get_sidebar();
 						} ?>
 						
-						<div id="midcol" class="col col-<?php echo $mainwidth; ?> first" role="main">
+			<div id="midcol" class="col col-<?php echo $mainwidth; ?> first" role="main">
 				<?php bamboo::display_widget('above-content') ?>
 				
 				<?php get_template_part('templates/content', 'tabs'); ?>
