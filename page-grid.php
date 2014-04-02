@@ -35,8 +35,6 @@ global $bamboo;
 		$layout_type = "left-mid-right three-col";
 	}
 	
-	
-	
 	get_header(); ?>
 
 		<div id="content" class="container <?php echo $layout_type; ?>">
@@ -53,24 +51,7 @@ global $bamboo;
 					
 					<div id="midcol" class="col col-<?php echo $mainwidth; ?> first" role="main">
 						
-						
-						<?php 
-						
-					
-						$gallery = explode(',',$bamboo['opt-gallery']);
-						
-						foreach ($gallery as $key => $item) {
-						echo wp_get_attachment_image($item);;
-							
-						}
-						 
-						?>
-						
-						
-						
-						<?php 
-						
-						bamboo::display_widget('above-content',$post->ID) ?>
+						<?php bamboo::display_widget('above-content',$post->ID) ?>
 						
 						<?php get_template_part('templates/content', 'grid'); ?>
 						

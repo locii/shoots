@@ -10,3 +10,45 @@ Theme: Shoots
 		.list-reset();
 	}
 }
+
+#slideshow-nav {
+	
+	float:left;
+	width:100%;
+	padding:10px 0;
+	
+	position:relative;
+	z-index:10;
+	
+	li
+	 {
+		float:left;
+	
+
+		
+		&.rslides_here a,
+		a:hover{
+			border:1px solid @primary;
+			background:@primary;
+			color:#fff
+		}
+	}
+		a,
+		.rslides_nav {
+			text-decoration:none;
+			border:1px solid #eee;
+			padding:2px 8px;
+			margin-right:10px;
+			background:#fafafa;
+			color:#333;
+			&:hover {
+				border:1px solid @primary;
+				background:@primary;
+				color:#fff
+			}
+		}
+}
+
+.rslides {
+	margin-bottom:10px
+}

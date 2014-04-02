@@ -287,7 +287,6 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					    "title" => "$title",
 					    "id" => "$id",
 					    "default" => "$default",
-					    'required' => array('appearance-advanced', '=' , "$required"),
 					    "desc" => "$desc",
 					    );
 				}
@@ -314,7 +313,6 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						    "title" => "$title",
 						    "id" => "$id",
 						    "default" => "$default",
-						    'required' => array('appearance-advanced', '=' , "$required"),
 						    "desc" => "$desc",
 						    );
 					}
@@ -345,9 +343,10 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 			
 				
 				function getpages() {
+				
+					// Get All pages
 					$pages = array(get_pages());
 					$pages = $pages[0];
-				
 					$pagelist = array('all' => 'All Pages');
 				
 					foreach ($pages as $key => $page) {
@@ -361,9 +360,30 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					return $pagelist;
 				}	
 				
+				
+				function getcategories() {
+				
+					// Get All pages
+					$categories = array(get_categories());
+					$categories = $categories[0];
+					$catlist = array();
+				
+					foreach ($categories as $key => $category) {
+						$name = $category->name;
+						$id = $category->term_id;;
+						array_push($catlist, $pagelist[$id] = $name);
+					}
+				
+					$catlist = array_unique($pagelist);
+					
+					return $catlist;
+				}	
+				
+
 				// Make the current pages on the site vailable in an array
 				$pagelist = getpages();
-				
+				$categories = getcategories();
+				//$pagelist = array_merge($pagelist,$categories);				
 			?>
 			<script>
 			jQuery(document).ready(function(){
@@ -444,27 +464,8 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'default'  => 'red',					
 						"desc" => "This drop down imports settings for the default themes that ship with this theme. Selecting an item from this list will remove any changes to the current theme you have made. The preset styles ar eimported from the less/presets folder.",
 						"default" => "" ),
-						
-					array(
-					  	'title'     => __( 'Advanced appearance', 'bamboo-framework' ),
-					  	'desc'      => __( 'Enable this option if you want to fine tune the appearance attributes in your theme.', 'bamboo-framework' ),
-					  	'id'        => 'appearance-advanced',
-						'default'   => 1,
-						'type'      => 'switch',
-						'customizer'=> array(),
-						
-					),
-							
-					
 					// Variables in the appearance-variables.xml get set appended here					
 				));
-					
-					
-					
-					
-					
-				
-				
 				$this->sections[] = array(
 					'icon' => 'el-icon-font',
 					'title' => __('Logo and Tagline', 'bamboo-framework'),
@@ -1075,7 +1076,7 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					    'id'       => 'banner-widget-pages',
 					    'type'     => 'select',
 					    'multi'     => 'true',
-					    'title'    => __('Display on these pages', 'bamboo-framework'), 
+					    'title'    => __('Display this widget position on these pages only', 'bamboo-framework'), 
 					    'desc'     => __('Set the pages to display any active banner widgets on.', 'bamboo-framework'),
 					    // Must provide key => value pairs for select options
 					    'options'  => $pagelist,
@@ -1102,7 +1103,7 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					    'id'       => 'above-content-widget-pages',
 					    'type'     => 'select',
 					    'multi'     => 'true',
-					    'title'    => __('Display on these pages', 'bamboo-framework'), 
+					    'title'    => __('Display this widget position on these pages only', 'bamboo-framework'), 
 					    'desc'     => __('Set the pages to display any active banner widgets on.', 'bamboo-framework'),
 					    // Must provide key => value pairs for select options
 					    'options'  => $pagelist,
@@ -1128,7 +1129,7 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					    'id'       => 'below-content-widget-pages',
 					    'type'     => 'select',
 					    'multi'     => 'true',
-					    'title'    => __('Display on these pages', 'bamboo-framework'), 
+					    'title'    => __('Display this widget position on these pages only', 'bamboo-framework'), 
 					    'desc'     => __('Set the pages to display any active banner widgets on.', 'bamboo-framework'),
 					    // Must provide key => value pairs for select options
 					    'options'  => $pagelist,
@@ -1154,7 +1155,7 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					    'id'       => 'bottom-widget-pages',
 					    'type'     => 'select',
 					    'multi'     => 'true',
-					    'title'    => __('Display on these pages', 'bamboo-framework'), 
+					    'title'    => __('Display this widget position on these pages only', 'bamboo-framework'), 
 					    'desc'     => __('Set the pages to display any active banner widgets on.', 'bamboo-framework'),
 					    // Must provide key => value pairs for select options
 					    'options'  => $pagelist,
@@ -1277,6 +1278,7 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'default' => 0,
 					),
 					
+					
 					array(
 					    'id'   => 'info_normal',
 					    'type' => 'heading',
@@ -1330,7 +1332,7 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 					    'id'       => 'slideshow-pages',
 					    'type'     => 'select',
 					    'multi'     => 'true',
-					    'title'    => __('Display slideshowon these pages', 'bamboo-framework'), 
+					    'title'    => __('Display slideshow on these pages', 'bamboo-framework'), 
 					    'desc'     => __('Set the pages to display any active banner widgets on.', 'bamboo-framework'),
 					    // Must provide key => value pairs for select options
 					    'options'  => $pagelist,

@@ -12,6 +12,8 @@ class bamboo {
 						
 				if ( is_active_sidebar( $position) ) : 
 				
+				
+				
 					global $bamboo;
 				
 					$display_banner = $bamboo[$position.'-widget-pages'];
@@ -28,6 +30,7 @@ class bamboo {
 						// proceed
 							
 					} elseif (!in_array($currentpage, $display_banner)) {
+					
 							return;
 					}
 						
@@ -51,36 +54,43 @@ class bamboo {
 					</section>
 						
 					<?php 
+					
 						
-						return ob_get_clean();
+						return ob_get_contents();
 						
 				endif;
 	
 			}
 
 
-	public function display_extra($position,$currentpage)
+		public function display_extra($position,$currentpage)
 			{
 						
 				global $bamboo;
 				
 				$display = 1;
 				$display_banner = $bamboo[$position.'-pages'];
-					
-				// If its just one page in the field check whether we should proceed
-				if(!is_array($display_banner)) {
-							
-					if($display_banner !== $currentpage) {			
-						$display = 0;	
+				
+				
+					// If its just one page in the field check whether we should proceed
+					if(!is_array($display_banner)) {
+								
+						if($display_banner !== $currentpage) {			
+							$display = 0;	
+						}
 					}
-				}
-				elseif(in_array("all", $display_banner)) {
-							
-					$display = 1;
-							
-				} elseif (!in_array($currentpage, $display_banner)) {
-					$display = 0;
-				}
+					elseif(in_array("all", $display_banner)) {
+								
+						$display = 1;
+								
+					} elseif (!in_array($currentpage, $display_banner)) {
+						$display = 0;
+					}
+					
+					elseif (!in_array($currentpage, $display_banner)) {
+						
+					}
+				
 				
 				return $display;
 	

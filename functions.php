@@ -390,4 +390,10 @@ function offcanvas_menu() {
 }
 add_action( 'after_setup_theme', 'offcanvas_menu' );
 
+
+function sidebar_menu() {
+	register_nav_menu ('sidebar', __( 'Sidebar Menu', '' ));
+}
+add_action( 'after_setup_theme', 'sidebar_menu' );
+
 ?>

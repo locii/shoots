@@ -119,10 +119,9 @@ jQuery(document).ready(function($) {
 	});
 	
 	
-	$("#offcanvas a").each(function(){
+	$("#offcanvas a,.sidebar a").each(function(){
 	
 		var linkdest = $(this).attr("href");
-		
 		
 		if(linkdest == "#accordion") {
 			$(this).parent().addClass('accordion-trigger').parent().addClass('accordion');
@@ -131,8 +130,14 @@ jQuery(document).ready(function($) {
 	
 	$(".accordion ul").hide();
 	
-	$('.accordion-trigger a').click(function() {
+	$('#offcanvas .accordion-trigger').click(function() {
 		$(this).toggleClass('open').next('ul').slideToggle();
+		
+	});
+	
+	$('.sidebar .accordion-trigger').click(function() {
+		$(this).toggleClass('open').children('ul').slideToggle();
+		
 	});
 	
 	

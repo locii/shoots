@@ -30,6 +30,21 @@ if ( is_active_sidebar( 'sidebar-primary' ) ) : ?>
 	
 	
 	<div id="sidebar1" class="sidebar col col-<?php echo $sidebar1width; ?>" role="complementary">
+	
+		<?php wp_nav_menu(array(
+				'container' => false,                           // remove nav container
+				'container_class' => 'menu widget',           // class of container (should you choose to use it)
+				'menu' => __( 'Sidebar', 'bonestheme' ),  // nav name
+				'menu_class' => 'vertical sidebar',         // adding custom nav class
+				'theme_location' => 'sidebar',                 // where it's located in the theme
+				'before' => '',                                 // before the menu
+				'after' => '',                                  // after the menu
+				'link_before' => '<span>',                            // before each link
+				'link_after' => '</span>',                              // after each link
+				'depth' => 0,                                   // limit the depth of the nav
+				'fallback_cb' => ''      // fallback function
+			)); ?>
+			
 		<?php dynamic_sidebar( 'sidebar-primary' ); ?>
 	</div>
 <?php endif; ?>
