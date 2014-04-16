@@ -9,7 +9,6 @@ if ( !class_exists( "ReduxFramework" ) ) {
 	return;
 } 
 
-include('bamboo/options-helper.php');
 
 if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 	class Redux_Framework_sample_config {

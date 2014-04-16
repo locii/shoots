@@ -298,7 +298,7 @@ function bones_comments( $comment, $args, $depth ) {
 function add_theme_scripts() {
 	wp_enqueue_script(
 		'theme_scripts',
-		get_stylesheet_directory_uri() . '/js/theme.lib.min.js',
+		get_stylesheet_directory_uri() . '/library/js/theme.lib.min.js',
 		array( 'jquery' )
 	);
 	

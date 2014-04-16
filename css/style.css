@@ -990,7 +990,7 @@ and more scalable.
 .commentlist li:first-child a {
   border-top: 0;
 }
-.commentlist li {
+.commentlist div {
   position: relative;
   clear: both;
   overflow: hidden;
@@ -1001,10 +1001,10 @@ and more scalable.
   border-top: 1px solid #fff;
   /* end .commentlist li ul.children */
 }
-.commentlist li:last-child {
+.commentlist div:last-child {
   margin-bottom: 0;
 }
-.commentlist li ul.children {
+.commentlist div ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
@@ -1028,6 +1028,29 @@ and more scalable.
 .commentlist .even {
   background: #fefefe;
 }
+.commentlist .comment-author {
+  font-size: 85%;
+}
+.commentlist .comment-edit-link {
+  margin: 0 10px;
+  padding: 4px 12px;
+  color: #ffffff !important;
+  background: #686c75 !important;
+  border: 1px solid #5e626a !important;
+  text-decoration: none;
+  outline: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-size: 85%;
+  float: right;
+}
+.commentlist .comment-edit-link:hover {
+  color: #ffffff !important;
+  background: #2bacb5 !important;
+  border: 1px solid #279ca5 !important;
+  text-decoration: none;
+  border-radius: 0;
+}
 .commentlist .vcard {
   margin-left: 50px;
 }
@@ -1047,7 +1070,7 @@ and more scalable.
 }
 .commentlist .vcard img.avatar {
   position: absolute;
-  left: 10px;
+  left: 0px;
   padding: 2px;
   border: 1px solid #cecece;
   background: #fff;
@@ -1063,14 +1086,14 @@ and more scalable.
 .commentlist .comment-reply-link {
   text-decoration: none;
   float: right;
-  background: #4598bb;
+  background: #686c75;
   padding: 3px 5px;
   color: #fff;
-  opacity: 0.65;
+  opacity: 1;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 0.9em;
-  margin-right: 30px;
+  margin-left: 10px;
 }
 .commentlist .comment-reply-link:hover,
 .commentlist .comment-reply-link:focus {

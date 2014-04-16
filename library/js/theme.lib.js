@@ -96,7 +96,7 @@ function loadGravatars() {
   // if the viewport is tablet or larger, we load in the gravatars
   if (viewport.width >= 768) {
   jQuery('.comment img[data-gravatar]').each(function(){
-    jQuery(this).attr('src',$(this).attr('data-gravatar'));
+    jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
   });
 	}
 } // end function

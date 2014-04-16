@@ -629,7 +629,9 @@ and more scalable.
 	.last-child();
 	.first-child();
 	
-	li {
+	
+	
+	div{
 		position: relative;
 		clear: both;
 		overflow: hidden;
@@ -695,12 +697,20 @@ and more scalable.
 	.children {}
 	.pingback {}
 	.bypostauthor {}
-	.comment-author {}
+	.comment-author {font-size:85%}
 	.comment-author-admin {}
 	.thread-alt {}
 	.thread-odd {}
 	.thread-even {}
 
+	.comment-edit-link {
+		margin:0 10px;
+		.btn-state();
+		font-size:85%;
+		float:right
+	}
+	
+	
 	/* vcard */
 	.vcard {
 		margin-left: 50px;
@@ -732,7 +742,7 @@ and more scalable.
 
 		img.avatar {
 			position: absolute;
-			left: 10px;
+			left: 0px;
 			padding: 2px;
 			border: 1px solid #cecece;
 			background: #fff;
@@ -770,14 +780,14 @@ and more scalable.
 	.comment-reply-link {
 		text-decoration: none;
 		float: right;
-		background: #4598bb;
+		background: @primary;
 		padding: 3px 5px;
 		color: #fff;
-		opacity: 0.65;
+		opacity: 1;
 		margin-bottom: 10px;
 		font-weight: 700;
 		font-size: 0.9em;
-		margin-right:30px;
+		margin-left:10px;
 		&:hover,
 		&:focus {
 			opacity: 1;
