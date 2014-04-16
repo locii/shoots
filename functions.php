@@ -78,8 +78,8 @@ if ( ! isset( $content_width ) ) {
 
 /************* Redux Framework *************/
 
-if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/library/redux-framework/ReduxCore/framework.php' ) ) {
-	require_once( dirname( __FILE__ ) . '/library/redux-framework/ReduxCore/framework.php' );
+if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/library/redux-framework/framework.php' ) ) {
+	require_once( dirname( __FILE__ ) . '/library/redux-framework/framework.php' );
 }
 if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/library/option-config.php' ) ) {
 	require_once( dirname( __FILE__ ) . '/library/option-config.php' );
