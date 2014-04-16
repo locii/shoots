@@ -1449,7 +1449,6 @@ if ( !class_exists( "Redux_Framework_sample_config" ) ) {
 						'validate' => 'js',
 						'desc' => '',
 					),
-
 				),
 			);
 						

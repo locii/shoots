@@ -112,14 +112,8 @@ jQuery(document).ready(function($) {
    * You can remove this if you don't need it
   */
   loadGravatars();
-
-	
-	$(".toggle-menu").click(function() {
-		$(this).next('ul').slideToggle('fast');
-	});
-	
-	
-	$("#offcanvas a,.sidebar a").each(function(){
+  
+  	$("#offcanvas a,.sidebar a").each(function(){
 	
 		var linkdest = $(this).attr("href");
 		
@@ -130,17 +124,8 @@ jQuery(document).ready(function($) {
 	
 	$(".accordion ul").hide();
 	
-	$('#offcanvas .accordion-trigger').click(function() {
-		$(this).toggleClass('open').next('ul').slideToggle();
-		
-	});
-	
-	$('.sidebar .accordion-trigger').click(function() {
+	$('.accordion-trigger').click(function() {
 		$(this).toggleClass('open').children('ul').slideToggle();
-		
 	});
-	
-	
-	
-	
+
 }); /* end of as page load scripts */
