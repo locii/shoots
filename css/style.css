@@ -1,37 +1,8 @@
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-
-Stylesheet: typography
-
-Here's where the magic happens. Here, you'll see we are calling in
-the separate media queries. The base mobile goes outside any query
-and is called at the beginning, after that we call the rest
-of the styles inside media queries.
-******************************************************************/
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Main Stylesheet
-
-Here's where the magic happens. Here, you'll see we are calling in
-the separate media queries. The base mobile goes outside any query
-and is called at the beginning, after that we call the rest
-of the styles inside media queries.
-******************************************************************/
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/**
- * Correct `block` display not defined in IE 8/9.
- */
 article,
 aside,
 details,
@@ -46,123 +17,60 @@ section,
 summary {
   display: block;
 }
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
 audio,
 canvas,
 video {
   display: inline-block;
 }
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
-/**
- * Address `[hidden]` styling not present in IE 8/9.
- * Hide the `template` element in IE, Safari, and Firefox < 22.
- */
 [hidden],
 template {
   display: none;
 }
-/* ==========================================================================
-   Base
-   ========================================================================== */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
 html {
   font-family: sans-serif;
-  /* 1 */
   -ms-text-size-adjust: 100%;
-  /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
 }
-/**
- * Remove default margin.
- */
 body {
   margin: 0;
 }
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/**
- * Remove the gray background color from active links in IE 10.
- */
 a {
   background: transparent;
 }
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
 a:focus {
   outline: thin dotted;
 }
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
 a:active,
 a:hover {
   outline: 0;
 }
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
 abbr[title] {
   border-bottom: 1px dotted;
 }
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
 b,
 strong {
   font-weight: bold;
 }
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
 dfn {
   font-style: italic;
 }
-/**
- * Address differences between Firefox and other browsers.
- */
 hr {
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
-/**
- * Address styling not present in IE 8/9.
- */
 mark {
   background: #ff0;
   color: #000;
 }
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
 code,
 kbd,
 pre,
@@ -170,27 +78,15 @@ samp {
   font-family: monospace, serif;
   font-size: 1em;
 }
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
 pre {
   white-space: pre-wrap;
 }
-/**
- * Set consistent quote types.
- */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
-/**
- * Address inconsistent and variable font size in all browsers.
- */
 small {
   font-size: 80%;
 }
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
 sub,
 sup {
   font-size: 75%;
@@ -204,182 +100,84 @@ sup {
 sub {
   bottom: -0.25em;
 }
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
 img {
   border: 0;
 }
-/**
- * Correct overflow displayed oddly in IE 9.
- */
 svg:not(:root) {
   overflow: hidden;
 }
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
 figure {
   margin: 0;
 }
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-/**
- * Define consistent border, margin, and padding.
- */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
 legend {
   border: 0;
-  /* 1 */
   padding: 0;
-  /* 2 */
 }
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
 button,
 input,
 select,
 textarea {
   font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 2 */
   margin: 0;
-  /* 3 */
   max-width: 100%;
 }
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
 button,
 input {
   line-height: normal;
 }
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
 button,
 select {
   text-transform: none;
 }
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
-  /* 2 */
   cursor: pointer;
-  /* 3 */
 }
-/**
- * Re-set default cursor for disabled elements.
- */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  /* 1 */
   padding: 0;
-  /* 2 */
 }
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
 input[type="search"] {
   -webkit-appearance: textfield;
-  /* 1 */
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  /* 2 */
   box-sizing: content-box;
 }
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/**
- * Remove inner padding and border in Firefox 4+.
- */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
 textarea {
   overflow: auto;
-  /* 1 */
   vertical-align: top;
-  /* 2 */
 }
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/******************************************************************
-CUSTOMIZED RESET VALUES
-I added these extra styles as a more personalized reset. Feel free
-to remove them if you like or add your own. If you want to update
-the normalize styles, make sure to edit from this point up.
-******************************************************************/
 p {
   -webkit-hyphens: auto;
   -epub-hyphens: auto;
   -moz-hyphens: auto;
-  -ms-hyphens: auto;
   hyphens: auto;
 }
 b,
@@ -409,14 +207,6 @@ dd {
 .commentlist {
   list-style: none;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
-/*********************
-CLEARFIXIN'
-*********************/
 .clearfix {
   clear: both;
   zoom: 1;
@@ -429,89 +219,30 @@ CLEARFIXIN'
 .clearfix:after {
   clear: both;
 }
-/*********************
-TOOLS
-*********************/
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
-/*********************
-TYPOGRAPHY
-*********************/
-/* 	To embed your own fonts, use this syntax
-	and place your fonts inside the 
-	library/fonts folder. For more information
-	on embedding fonts, go to:
-	http://www.fontsquirrel.com/
-	Be sure to remove the comment brackets.
-*/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('../fonts/font-name.eot');
-    	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('../fonts/font-name.woff') format('woff'),
-             url('../fonts/font-name.ttf') format('truetype'),
-             url('../fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-/* 
-use the best ampersand 
-http://simplebits.com/notebook/2008/08/14/ampersands-2/
-*/
 span.amp {
   font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
   font-style: italic;
 }
-/*********************
-BORDER RADIUS
-*********************/
-/* 
-NOTE: For older browser support (and some mobile), 
-don't use the shorthand to define *different* corners. 
-
-USAGE: .border-radius(4px); 
-
-*/
-/*********************
-TRANISTION
-*********************/
-/* .transition(all,2s); */
-/*********************
-CSS3 GRADIENTS
-Be careful with these since they can 
-really slow down your CSS. Don't overdo it.
-*********************/
-/* .css-gradient(#dfdfdf,#f8f8f8); */
-/*********************
-BOX SHADOW
-*********************/
-/* .boxShadow(0,0,4px,0,#444); */
-/* .boxShadow(none); */
 .resetmodal {
   position: relative;
   width: auto !important;
-  left: auto!important;
-  top: auto!important;
+  left: auto !important;
+  top: auto !important;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
   border-radius: 0 !important;
+  -moz-background-clip: padding !important;
   -webkit-background-clip: padding-box !important;
   background-clip: padding-box !important;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 .align-right {
   text-align: right;
 }
@@ -528,7 +259,6 @@ Theme: Shoots
 .last {
   float: right;
 }
-/* Additional text alignment */
 .text-left {
   text-align: left;
 }
@@ -561,11 +291,6 @@ Theme: Shoots
 .padding {
   padding: 30px 0;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 body {
   font-family: "Georgia", Cambria, Times New Roman, Times, serif;
   font-size: 100%;
@@ -578,9 +303,6 @@ body {
 #logo {
   margin-bottom: 30px;
 }
-/*
- * Items
- */
 .uk-switcher > *:not(.uk-active) {
   display: none;
 }
@@ -588,76 +310,23 @@ body {
   position: relative;
   z-index: 1;
 }
-/********************
-02. WORDPRESS BODY CLASSES
-    style a page via class
-********************/
-/* for sites that are read right to left (i.e. hebrew) */
-/* home page */
-/* blog template page */
-/* archive page */
-/* date archive page */
-/* replace the number to the corresponding page number */
-/* search page */
-/* search result page */
-/* no results search page */
-/* individual paged search (i.e. body.search-paged-3) */
-/* 404 page */
-/* single post page */
-/* individual post page by id (i.e. body.postid-73) */
-/* individual paged single (i.e. body.single-paged-3) */
-/* attatchment page */
-/* individual attatchment page (i.e. body.attachmentid-763) */
-/* style mime type pages */
-/* author page */
-/* user nicename (i.e. body.author-samueladams) */
-/* paged author archives (i.e. body.author-paged-4) for page 4 */
-/* category page */
-/* individual category page (i.e. body.category-6) */
-/* replace the number to the corresponding page number */
-/* tag page */
-/* individual tag page (i.e. body.tag-news) */
-/* replace the number to the corresponding page number */
-/* custom page template page */
-/* individual page template (i.e. body.page-template-contact-php */
-/* replace the number to the corresponding page number */
-/* parent page template */
-/* child page template */
-/* replace the number to the corresponding page number */
-/* if user is logged in */
-/* paged items like search results or archives */
-/* individual paged (i.e. body.paged-3) */
-/*********************
-03. LAYOUT & GRID STYLES
-*********************/
 .wrap {
   width: 96%;
   margin: 0 auto;
 }
-/*********************
-04. LINK STYLES
-*********************/
 a,
 a:visited {
-  color: #686c75;
-  /* on hover */
-  /* on click */
-  /* mobile tap color */
+  color: #686C75;
 }
 a:hover,
-a:visited:hover,
 a:focus,
+a:visited:hover,
 a:visited:focus {
-  color: #2bacb5;
+  color: #2BACB5;
 }
 a:link,
 a:visited:link {
-  /*
-		this highlights links on iPhones/iPads.
-		so it basically works like the :hover selector
-		for mobile devices.
-		*/
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+  -webkit-tap-highlight-color: rgba(0,0,0,0.3);
 }
 img {
   max-width: 100%;
@@ -679,9 +348,6 @@ img {
   float: right;
   text-decoration: none;
 }
-/******************************************************************
-05. H1, H2, H3, H4, H5 STYLES
-******************************************************************/
 h1,
 .h1,
 h2,
@@ -695,11 +361,6 @@ h5,
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 400;
-  /*
-	if you're going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-  /* removing text decoration from all headline links */
 }
 h1 a,
 .h1 a,
@@ -740,19 +401,6 @@ h5,
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-/*********************
-06. HEADER STYLES
-*********************/
-/*********************
-07. NAVIGATION STYLES
-*********************/
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
 #navwrap.hide-menu ul,
 #navwrap.collapse-menu ul {
   display: none;
@@ -771,65 +419,23 @@ and more scalable.
 }
 .nav {
   border-bottom: 0;
-  /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */
-}
-.nav li {
-  /*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
 }
 .nav li a {
   display: block;
   text-decoration: none;
   padding: 10px 10px;
   background-color: #eee;
-  /*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 30px;
 }
-/* end .nav */
-/*********************
-08. POSTS & CONTENT STYLES
-*********************/
-/* end .hentry */
 .archive-title {
   margin-top: 0;
   padding-top: 0;
 }
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
-/* post meta */
 .byline {
   color: #999;
-}
-/* entry content */
-.entry-content {
-  /*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
 }
 .entry-content dd {
   margin-left: 0;
@@ -852,12 +458,10 @@ and more scalable.
   border: 1px solid #cecece;
   padding: 10px;
 }
-/* end .entry-content */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
-  /* images inside wp-caption */
 }
 .wp-caption img {
   max-width: 100%;
@@ -869,26 +473,9 @@ and more scalable.
   margin: 4px 0 7px;
   text-align: center;
 }
-/* end .wp-caption */
-/* image gallery styles */
-/* end .gallery */
-/* gallery caption styles */
-/******************************************************************
-09. PAGE NAVI STYLES
-******************************************************************/
 .page-navigation,
 .wp-prev-next {
   margin: 1.1em 0 2.2em;
-}
-.bones_page_navi {
-  /* current page link */
-  /* end .bones_page_navi .bpn-current */
-  /* common styles for page-navi links */
-  /* remove the bg on end links */
-  /* previous link */
-  /* next page link */
-  /* first page link */
-  /* last page link */
 }
 .bones_page_navi li {
   float: left;
@@ -909,9 +496,6 @@ and more scalable.
   padding: 3px 6px;
   position: relative;
 }
-.bones_page_navi li.bpn-current a {
-  /* hovering on current page link */
-}
 .bones_page_navi li.bpn-prev-link,
 .bones_page_navi li.bpn-next-link {
   font-weight: 700;
@@ -929,16 +513,19 @@ and more scalable.
 .bones_page_navi li.bpn-next-link a {
   padding: 4px 12px;
   color: #ffffff !important;
-  background: #686c75 !important;
+  background: #686C75 !important;
   border: 1px solid #5e626a !important;
   text-decoration: none;
   outline: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .bones_page_navi li.bpn-next-link a:hover {
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
   border-radius: 0;
@@ -946,41 +533,21 @@ and more scalable.
 .bones_page_navi li.bpn-next-link a:hover,
 .bones_page_navi li.bpn-next-link a:focus {
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
 }
-/* end .bones_page_navi */
-/* fallback previous & next links */
 .wp-prev-next .prev-link {
   float: left;
 }
 .wp-prev-next .next-link {
   float: right;
 }
-/* end .wp-prev-next */
-/******************************************************************
-10. COMMENT STYLES
-******************************************************************/
-/* h3 comment title */
-#comments {
-  /* number of comments span */
-}
 #comment-nav ul {
   margin-left: 0;
 }
 #comment-nav ul li {
   list-style-type: none;
-}
-.commentlist {
-  /* general comment classes */
-  /* vcard */
-  /* end .commentlist .vcard */
-  /* comment meta */
-  /* comment content */
-  /* end .commentlist .comment_content */
-  /* comment reply link */
-  /* end .commentlist .comment-reply-link */
 }
 .commentlist li:last-child,
 .commentlist li:last-child a {
@@ -999,15 +566,12 @@ and more scalable.
   padding: 0.7335em 10px;
   border-bottom: 1px solid #eee;
   border-top: 1px solid #fff;
-  /* end .commentlist li ul.children */
 }
 .commentlist div:last-child {
   margin-bottom: 0;
 }
 .commentlist div ul.children {
   margin: 0;
-  /* variations */
-  /* change number for different depth */
 }
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
@@ -1035,18 +599,21 @@ and more scalable.
   margin: 0 10px;
   padding: 4px 12px;
   color: #ffffff !important;
-  background: #686c75 !important;
+  background: #686C75 !important;
   border: 1px solid #5e626a !important;
   text-decoration: none;
   outline: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   font-size: 85%;
   float: right;
 }
 .commentlist .comment-edit-link:hover {
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
   border-radius: 0;
@@ -1086,7 +653,7 @@ and more scalable.
 .commentlist .comment-reply-link {
   text-decoration: none;
   float: right;
-  background: #686c75;
+  background: #686C75;
   padding: 3px 5px;
   color: #fff;
   opacity: 1;
@@ -1099,125 +666,58 @@ and more scalable.
 .commentlist .comment-reply-link:focus {
   opacity: 1;
 }
-/* end .commentlist */
-/*********************
-12. SIDEBARS & ASIDES
-*********************/
-.widget ul li {
-  /* deep nesting */
-}
-/*********************
-13. FOOTER STYLES
-*********************/
 .footer {
   clear: both;
 }
-/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
-/* end .footer-links */
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-Original: UIKIT
-******************************************************************/
-/* ========================================================================
-   Component: Off-canvas
- ========================================================================== */
-/*
- * This is the offcanvas overlay and bar container
- * 1. Hide by default
- * 2. Set fixed position
- * 3. Mask the background page
- */
 #offcanvas-toggle {
   position: absolute;
   top: 0;
   right: 0;
 }
 .uk-offcanvas {
-  /* 1 */
   display: none;
-  /* 2 */
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1000;
-  /* 3 */
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0,0,0,0.1);
 }
 .uk-offcanvas.uk-active {
   display: block;
 }
-/* Sub-object `uk-offcanvas-page`
- ========================================================================== */
-/*
- * Prepares the whole HTML page to slide-out
- * 1. Fix the main page and disallow scrolling
- * 2. Side-out transition
- */
 .uk-offcanvas-page {
-  /* 1 */
   position: fixed;
-  /* 2 */
   -webkit-transition: margin-left 0.3s ease-in-out 50ms;
   transition: margin-left 0.3s ease-in-out 50ms;
 }
-/* Sub-object `uk-offcanvas-bar`
- ========================================================================== */
-/*
- * This is the offcanvas bar
- * 1. Set fixed position
- * 2. Size and style
- * 3. Allow scrolling
- * 4. Side-out transition
- */
 .uk-offcanvas-bar {
-  /* 1 */
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
   transform: translateX(-100%);
   z-index: 1001;
-  /* 2 */
   width: 250px;
   max-width: 100%;
   background: #333333;
-  /* 3 */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  /* 4 */
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
 }
 .uk-offcanvas.uk-active .uk-offcanvas-bar.uk-offcanvas-bar-show {
   -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
   transform: translateX(0%);
 }
-/* Modifier `uk-offcanvas-bar-flip`
- ========================================================================== */
 .uk-offcanvas-bar-flip {
   left: auto;
   right: 0;
   -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
-/* Panel in offcanvas
- ========================================================================== */
 .uk-offcanvas .uk-panel {
   margin: 20px 15px;
   color: #ffffff;
@@ -1234,11 +734,6 @@ Original: UIKIT
 .uk-offcanvas .uk-panel a:not([class]):hover {
   color: #cccccc;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 #respond {
   margin: 30px 0;
   padding-bottom: 2.2em;
@@ -1269,11 +764,10 @@ Theme: Shoots
 #respond form input[type=url],
 #respond form textarea {
   padding: 10px 14px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #eeeeee;
   line-height: 2em;
   width: 100%;
-  /* form validation */
 }
 #respond form input[type=text]:focus,
 #respond form input[type=email]:focus,
@@ -1289,6 +783,7 @@ Theme: Shoots
   border-color: #fbc2c4;
   background-color: #f6e7eb;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   -ms-box-shadow: none;
   box-shadow: none;
 }
@@ -1303,31 +798,29 @@ Theme: Shoots
   width: 100%;
   height: 150px;
 }
-/* comment submit button */
 #submit {
   padding: 4px 12px;
   color: #ffffff !important;
-  background: #686c75 !important;
+  background: #686C75 !important;
   border: 1px solid #5e626a !important;
   text-decoration: none;
   outline: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 #submit:hover {
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
   border-radius: 0;
 }
-/* comment form title */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
-/* cancel comment reply link */
-/* logged in comments */
-/* allowed tags */
 .form-allowed-tags {
   margin: 1.5em 10px 0.7335em 0;
   font-size: 90%;
@@ -1337,18 +830,8 @@ Theme: Shoots
   border-color: #bfe4f4;
   background: #d5edf8;
 }
-/* no comments */
 .nocomments {
   margin: 0 20px 1.1em;
-}
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
-/* entry content */
-.entry-content {
-  /* at this larger size, we can start to align images */
 }
 .entry-content .alignleft,
 .entry-content img.alignleft {
@@ -1369,7 +852,6 @@ Theme: Shoots
   display: block;
   clear: both;
 }
-/* end .entry-content */
 .author-block {
   float: left;
   width: 100%;
@@ -1379,8 +861,9 @@ Theme: Shoots
   margin: 0;
 }
 .author-block img {
-  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
   background: #fff !important;
   padding: 4px;
   max-width: 98%;
@@ -1408,13 +891,6 @@ Theme: Shoots
 .author-block ul li a {
   text-decoration: none;
 }
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Tabbed page layout Stylesheet
-
-******************************************************************/
 .uk-switcher {
   margin: 0;
   padding: 0;
@@ -1438,7 +914,7 @@ Stylesheet: Tabbed page layout Stylesheet
 }
 .tab-list li.uk-active a {
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
 }
@@ -1448,20 +924,6 @@ Stylesheet: Tabbed page layout Stylesheet
 #bamboo-tabs li {
   list-style-type: none;
 }
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Grid page layout Stylesheet
-
-******************************************************************/
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Featured page layout Stylesheet
-
-******************************************************************/
 .featured-block {
   margin-bottom: 30px;
 }
@@ -1469,11 +931,6 @@ Stylesheet: Featured page layout Stylesheet
   width: 100%;
   margin: 0;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 #bamboo-slideshow ul {
   margin-left: 0;
 }
@@ -1492,9 +949,9 @@ Theme: Shoots
 }
 #slideshow-nav li.rslides_here a,
 #slideshow-nav li a:hover {
-  border: 1px solid #686c75;
-  background: #686c75;
-  color: #ffffff;
+  border: 1px solid #686C75;
+  background: #686C75;
+  color: #fff;
 }
 #slideshow-nav a,
 #slideshow-nav .rslides_nav {
@@ -1507,18 +964,13 @@ Theme: Shoots
 }
 #slideshow-nav a:hover,
 #slideshow-nav .rslides_nav:hover {
-  border: 1px solid #686c75;
-  background: #686c75;
-  color: #ffffff;
+  border: 1px solid #686C75;
+  background: #686C75;
+  color: #fff;
 }
 .rslides {
   margin-bottom: 10px;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 @font-face {
   font-family: 'fontello';
   src: url('../font/fontello.eot?16070381');
@@ -1526,16 +978,6 @@ Theme: Shoots
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?16070381#fontello') format('svg');
-  }
-}
-*/
 [class^="icon-"]:before,
 [class*=" icon-"]:before,
 .accordion-trigger :before {
@@ -1548,205 +990,146 @@ Theme: Shoots
   width: 1em;
   margin-right: .2em;
   text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
   margin-left: .2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 .icon-note:before {
   content: '\e827';
 }
-/* '' */
 .icon-doc-new:before {
   content: '\e802';
 }
-/* '' */
 .icon-mail-1:before {
   content: '\e816';
 }
-/* '' */
 .icon-user:before {
   content: '\e815';
 }
-/* '' */
 .icon-video:before {
   content: '\e826';
 }
-/* '' */
 .icon-picture:before {
   content: '\e828';
 }
-/* '' */
 .icon-camera:before {
   content: '\e82a';
 }
-/* '' */
 .icon-menu:before {
   content: '\e812';
 }
-/* '' */
 .icon-plus-1:before {
   content: '\e814';
 }
-/* '' */
 .icon-minus-1:before {
   content: '\e813';
 }
-/* '' */
 .icon-link:before {
   content: '\e829';
 }
-/* '' */
 .icon-quote:before {
   content: '\e82c';
 }
-/* '' */
 .icon-chat:before {
   content: '\e825';
 }
-/* '' */
 .icon-book-open:before {
   content: '\e82b';
 }
-/* '' */
 .icon-up-open:before {
   content: '\e80f';
 }
-/* '' */
 .icon-down-open-mini:before {
   content: '\e818';
 }
-/* '' */
 .icon-left-open-mini:before {
   content: '\e81b';
 }
-/* '' */
 .icon-right-open-mini:before {
   content: '\e81a';
 }
-/* '' */
 .icon-up-open-mini:before {
   content: '\e810';
 }
-/* '' */
 .icon-down-open-big:before {
   content: '\e819';
 }
-/* '' */
 .icon-up-open-big:before {
   content: '\e811';
 }
-/* '' */
 .icon-flickr:before {
   content: '\e81c';
 }
-/* '' */
 .icon-search:before {
   content: '\e817';
 }
-/* '' */
 .icon-twitter-1:before {
   content: '\e81e';
 }
-/* '' */
 .icon-facebook-squared:before {
   content: '\e821';
 }
-/* '' */
 .icon-gplus-circled:before {
   content: '\e81d';
 }
-/* '' */
 .icon-tumblr-circled:before {
   content: '\e820';
 }
-/* '' */
 .icon-linkedin-circled:before {
   content: '\e822';
 }
-/* '' */
 .icon-dribbble-circled:before {
   content: '\e823';
 }
-/* '' */
 .icon-instagram:before {
   content: '\e824';
 }
-/* '' */
 .icon-mail:before {
   content: '\e807';
 }
-/* '' */
 .icon-user-outline:before {
   content: '\e805';
 }
-/* '' */
 .icon-camera-outline:before {
   content: '\e808';
 }
-/* '' */
 .icon-plus-outline:before {
   content: '\e80a';
 }
-/* '' */
 .icon-plus:before {
   content: '\e809';
 }
-/* '' */
 .icon-minus-outline:before {
   content: '\e80b';
 }
-/* '' */
 .icon-minus:before {
   content: '\e80c';
 }
-/* '' */
 .icon-eye-outline:before {
   content: '\e80d';
 }
-/* '' */
 .icon-tags:before {
   content: '\e806';
 }
-/* '' */
 .icon-pencil-1:before {
   content: '\e800';
 }
-/* '' */
 .icon-comment:before {
   content: '\e804';
 }
-/* '' */
 .icon-trash-1:before {
   content: '\e801';
 }
-/* '' */
 .icon-doc-add:before {
   content: '\e803';
 }
-/* '' */
 .icon-cog-outline:before {
   content: '\e80e';
 }
-/* '' */
 .icon-vimeo-circled:before {
   content: '\e81f';
 }
-/* '' */
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 .alert {
   margin: 10px 0;
   padding: 5px 18px;
@@ -1781,29 +1164,12 @@ Theme: Shoots
   background: #e6efc2;
 }
 @media only screen and (min-width: 768px) {
-  /******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
   .col,
   .widget {
     position: relative;
     float: left;
     width: 100%;
   }
-  /* 4.85%;  } /* grid_1  */
-  /* 13.45%; } /* grid_2  */
-  /* 22.05%; } /* grid_3  */
-  /* 30.75%; } /* grid_4  */
-  /* 39.45%; } /* grid_5  */
-  /* 48%;    } /* grid_6  */
-  /* 56.75%; } /* grid_7  */
-  /* 65.4%;  } /* grid_8  */
-  /* 74.05%; } /* grid_9  */
-  /* 82.7%;  } /* grid_10 */
-  /* 91.35%; } /* grid_11 */
-  /* 100%;   } /* grid_12 */
   .col-1 {
     width: 5.801104972%;
   }
@@ -1848,11 +1214,6 @@ Theme: Shoots
   .widget:first-child {
     margin-left: 0 !important;
   }
-  /******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
   .stacked .widget {
     float: left;
     width: 100%;
@@ -1963,11 +1324,6 @@ Theme: Shoots
   .doublelast.widgets-6 .widget:last-child {
     width: 65.74585634900001%;
   }
-  /******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
   #logo {
     margin-bottom: 0;
   }
@@ -1981,11 +1337,6 @@ Theme: Shoots
     list-style-type: none;
   }
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 #inner-content {
   padding: 0;
 }
@@ -2030,11 +1381,6 @@ Theme: Shoots
   float: right;
   margin-left: 0;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 .page-numbers,
 .pagination {
   padding-left: 0;
@@ -2052,20 +1398,23 @@ Theme: Shoots
 .page-numbers li span.current,
 .pagination li span.current {
   padding: 4px 12px;
-  background: #686c75 !important;
+  color: #ffffff !important;
+  background: #686C75 !important;
   border: 1px solid #5e626a !important;
+  text-decoration: none;
   outline: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
-  text-decoration: none;
 }
 .page-numbers li span.current:hover,
 .pagination li span.current:hover {
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
   border-radius: 0;
@@ -2074,26 +1423,24 @@ Theme: Shoots
 .pagination a {
   padding: 4px 12px;
   color: #ffffff !important;
-  background: #686c75 !important;
+  background: #686C75 !important;
   border: 1px solid #5e626a !important;
   text-decoration: none;
   outline: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .page-numbers a:hover,
 .pagination a:hover {
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
   border-radius: 0;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 .uk-sticky #navwrap {
   z-index: 998;
 }
@@ -2124,35 +1471,25 @@ Theme: Shoots
     top: 30px !important;
   }
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 ul.accordion li.accordion-trigger > a span:before {
   float: right;
   content: '\e819';
-  background: #686c75;
+  background: #686C75;
   padding: 8px;
   color: #fff;
   margin: 12px -8px 0 0;
 }
 ul.accordion li.accordion-trigger > a.open span:before {
   content: '\e811';
-  background: #2bacb5;
+  background: #2BACB5;
 }
 ul.accordion li.accordion-trigger > a:hover span:before {
-  background: #2bacb5;
+  background: #2BACB5;
 }
 ul.accordion ul {
   display: none;
 }
 @media only screen and (max-width: 768px) {
-  /******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
   #navwrap.collapse-menu ul {
     clear: both;
     background: #ffffff;
@@ -2170,7 +1507,6 @@ Theme: Shoots
     width: 100%;
   }
   #navwrap.collapse-menu ul ul {
-    -webkit-box-shadow: none;
     box-shadow: none;
     padding: 0;
     display: block;
@@ -2189,20 +1525,12 @@ Theme: Shoots
   }
 }
 @media only screen and (min-width: 768px) {
-  /******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
-  /* Menus to the right */
   .zenright ul {
     float: right;
   }
-  /* Menus to the left */
   .zenleft ul {
     float: left;
   }
-  /* menus in the middle */
   .zencenter ul {
     text-align: center;
     float: none !important;
@@ -2218,7 +1546,7 @@ Theme: Shoots
   }
   .zencenter ul li li {
     display: block;
-    float: left!important;
+    float: left !important;
     text-align: left;
     width: 100%;
     text-indent: 0 !important;
@@ -2249,9 +1577,6 @@ Theme: Shoots
   }
   .nav {
     border: 0;
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */
   }
   .nav ul {
     margin-top: 0;
@@ -2259,17 +1584,9 @@ Theme: Shoots
   .nav li {
     float: left;
     position: relative;
-    /*
-		plan your menus and drop-downs wisely.
-		*/
-    /* showing sub-menus */
   }
   .nav li a {
     border-bottom: 0;
-    /*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
   }
   .nav li a:hover,
   .nav li a:focus {
@@ -2284,15 +1601,6 @@ Theme: Shoots
     overflow: hidden;
     visibility: hidden;
     z-index: 8999;
-    /* highlight sub-menu current page */
-  }
-  .nav li ul.sub-menu li,
-  .nav li ul.children li {
-    /*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
   }
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
@@ -2311,25 +1619,12 @@ Theme: Shoots
     overflow: visible;
     visibility: visible;
   }
-  /* end .nav */
 }
 @media print {
-  /******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Print Stylesheet
-
-This is the print stylesheet. There's probably not a lot
-of reasons to edit this stylesheet. If you want to
-though, go for it.
-
-******************************************************************/
   * {
     background: transparent !important;
     color: black !important;
     text-shadow: none !important;
-    -webkit-filter: none !important;
     filter: none !important;
     -ms-filter: none !important;
   }
@@ -2387,11 +1682,6 @@ though, go for it.
     display: none;
   }
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 html,
 body {
   background: #ffffff;
@@ -2412,11 +1702,6 @@ img.border {
   padding: 4px;
   border: 1px solid #eeeeee;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 #navwrap {
   float: left;
   width: 100%;
@@ -2436,7 +1721,7 @@ Theme: Shoots
   line-height: 25px;
 }
 #navwrap .inner {
-  background: #686c75;
+  background: #686C75;
   height: 50px;
   line-height: 25px;
 }
@@ -2452,6 +1737,9 @@ Theme: Shoots
 #navwrap li {
   line-height: 25px;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 #navwrap li li:first-child,
@@ -2462,10 +1750,14 @@ Theme: Shoots
 #navwrap li li:last-child a {
   border-bottom: 0;
 }
-#navwrap .nav li.menu-item-has-children > a span {
+#navwrap .nav
+
+	li.menu-item-has-children > a span {
   margin-right: 4px;
 }
-#navwrap .nav li.menu-item-has-children > a span:after {
+#navwrap .nav
+
+	li.menu-item-has-children > a span:after {
   margin-top: 25px;
   float: right;
   content: "";
@@ -2475,12 +1767,16 @@ Theme: Shoots
   border-right: 4px solid transparent;
   border-top: 4px solid #ffffff;
 }
-#navwrap .nav li.menu-item-has-children > a:hover span:after {
+#navwrap .nav
+
+	li.menu-item-has-children > a:hover span:after {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 4px solid #ffffff;
 }
-#navwrap .nav li.menu-item-has-children:hover span:after {
+#navwrap .nav
+
+	li.menu-item-has-children:hover span:after {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 4px solid #ffffff;
@@ -2491,32 +1787,33 @@ Theme: Shoots
 }
 #navwrap li > a {
   color: #ffffff;
-  background: #686c75;
+  background: #686C75;
   height: 50px;
   line-height: 50px;
   padding: 0 20px;
 }
 #navwrap li > a:hover {
-  background: #2bacb5;
+  background: #2BACB5;
   color: #ffffff;
 }
 #navwrap li.current-menu-item > a,
 #navwrap li.current-menu-parent > a,
 #navwrap li.current_page_item > a,
 #navwrap li.current-page-ancestor > a {
-  background: #2bacb5;
+  background: #2BACB5;
   color: #ffffff;
 }
 #navwrap li:hover a {
-  background: #2bacb5;
+  background: #2BACB5;
   color: #ffffff;
 }
 #navwrap ul.sub-menu,
 #navwrap ul.children {
   background: #ffffff;
   border-color: #eeeeee;
-  -webkit-box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 15px rgba(0,0,0,0.1);
   min-width: 300px;
 }
 #navwrap ul.sub-menu li,
@@ -2538,32 +1835,30 @@ Theme: Shoots
 }
 #navwrap ul.sub-menu a:hover,
 #navwrap ul.children a:hover {
-  color: #2bacb5;
+  color: #2BACB5;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 button#offcanvas-toggle {
   padding: 4px 12px;
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
   outline: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 button#offcanvas-toggle:hover {
   color: #ffffff !important;
-  background: #686c75 !important;
+  background: #686C75 !important;
   border: 1px solid #5e626a !important;
   text-decoration: none;
   border-radius: 0;
 }
 .uk-offcanvas {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
 }
 .uk-offcanvas-bar,
 #navwrap .uk-offcanvas-bar {
@@ -2573,9 +1868,9 @@ button#offcanvas-toggle:hover {
 #navwrap .uk-offcanvas-bar ul {
   float: left;
   width: 100%;
+  margin-left: 0;
   border-bottom: 1px solid #474747;
   border-top: 1px solid #1f1f1f;
-  margin-left: 0;
 }
 .uk-offcanvas-bar ul li,
 #navwrap .uk-offcanvas-bar ul li {
@@ -2618,27 +1913,9 @@ button#offcanvas-toggle:hover {
   float: none;
   width: auto;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-
-Stylesheet: Above grid Stylesheet
-
-
-******************************************************************/
 #banner .widget {
   margin-top: 30px;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 #search .widget {
   padding: 0;
   margin-top: 15px;
@@ -2647,24 +1924,27 @@ Theme: Shoots
   float: right;
   padding: 4px 12px;
   color: #ffffff !important;
-  background: #686c75 !important;
+  background: #686C75 !important;
   border: 1px solid #5e626a !important;
   text-decoration: none;
   outline: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   height: 45px;
   width: 20%;
 }
 #search input#searchsubmit:hover {
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
   border-radius: 0;
 }
 #search input#searchsubmit:hover {
-  background: #2bacb5;
+  background: #2BACB5;
 }
 #search label {
   display: none;
@@ -2676,6 +1956,7 @@ Theme: Shoots
   border: 0;
   width: 77%;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
   padding-left: 50px;
   margin-top: -12px;
@@ -2691,17 +1972,15 @@ Theme: Shoots
   background: #fff;
   padding: 0;
   text-indent: 20px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
+  -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid #eeeeee;
   margin: 0;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 #headerwrap {
   padding: 30px 0;
 }
@@ -2719,7 +1998,7 @@ Theme: Shoots
   font-family: Open+Sans:400,600,300:latin;
 }
 #headerwrap #logo a:hover {
-  color: #2bacb5;
+  color: #2BACB5;
 }
 #headerwrap #tagline span {
   color: #721a62;
@@ -2733,12 +2012,6 @@ Theme: Shoots
 #below-content .widget {
   margin: 30px 0 !important;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
-/* Sidebar margin ul reset */
 .sidebar ul {
   margin-left: 0;
   padding: 0;
@@ -2755,7 +2028,10 @@ Theme: Shoots
   padding: 10px;
   background: #fff;
   border: 1px solid #eeeeee;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
+  -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
@@ -2779,13 +2055,13 @@ Theme: Shoots
   padding: 8px 0;
 }
 .sidebar a {
-  color: #333333;
+  color: #333;
   text-decoration: none;
   margin: 0;
   padding: 0;
 }
 .sidebar a:hover {
-  color: #eeeeee;
+  color: #eee;
 }
 .sidebar span {
   display: block;
@@ -2803,13 +2079,11 @@ Theme: Shoots
   padding: 0;
   margin-left: 0;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 a {
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 p {
@@ -2880,13 +2154,19 @@ input[type="submit"],
 .more-link {
   padding: 4px 12px;
   color: #ffffff !important;
-  background: #686c75 !important;
+  background: #686C75 !important;
   border: 1px solid #5e626a !important;
   text-decoration: none;
   outline: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0;
+  -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
@@ -2898,16 +2178,11 @@ input[type="submit"]:hover,
 .comment-reply-link:hover,
 .more-link:hover {
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
   border-radius: 0;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 .widgets ul {
   margin-left: 0;
 }
@@ -2917,11 +2192,6 @@ Theme: Shoots
 .widget_search label {
   display: block;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 #main {
   padding: 50px 0;
   clear: both;
@@ -2938,7 +2208,7 @@ Theme: Shoots
   color: #333;
 }
 #main header .byline {
-  color: #999999;
+  color: #999;
   font-size: 75%;
   font-size: 85%;
   line-height: 2em;
@@ -2978,16 +2248,19 @@ Theme: Shoots
 .tags a {
   padding: 4px 12px;
   color: #ffffff !important;
-  background: #686c75 !important;
+  background: #686C75 !important;
   border: 1px solid #5e626a !important;
   text-decoration: none;
   outline: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .tags a:hover {
   color: #ffffff !important;
-  background: #2bacb5 !important;
+  background: #2BACB5 !important;
   border: 1px solid #279ca5 !important;
   text-decoration: none;
   border-radius: 0;
@@ -3001,11 +2274,6 @@ Theme: Shoots
 .more-link {
   float: right;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 .type-post {
   position: relative;
   z-index: 2;
@@ -3019,16 +2287,6 @@ Theme: Shoots
   right: 0;
   top: 0;
 }
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
-/******************************************************************
-Site Name: Bamboo Framework
-Author: Bamboothemes
-Theme: Shoots
-******************************************************************/
 #toTop {
   position: fixed;
   z-index: 100;
@@ -3041,11 +2299,11 @@ Theme: Shoots
   height: 28px;
   font-size: 1.4em;
   line-height: 28px;
-  background: #2bacb5;
+  background: #2BACB5;
   color: #fff;
 }
 #toTop span {
-  color: #ffffff;
+  color: #fff;
 }
 #toTop:hover {
   background: #333;
@@ -3054,5 +2312,5 @@ Theme: Shoots
   color: #fff;
 }
 #toTop:hover a:hover {
-  color: #ffffff;
+  color: #fff;
 }
