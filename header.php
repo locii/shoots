@@ -85,7 +85,7 @@ global $bamboo;
 		
 		
 		
-		<section id="main" class="<?php if($bamboo['breadcrumb']) {?>with-breadcrumb<?php } ?>">
+		<section id="main" class="<?php if($bamboo['breadcrumb']  && !is_home()) {?>with-breadcrumb<?php } ?>">
 		
 		<?php 
 			if(bamboo::display_extra('slideshow', $post->ID)) {
